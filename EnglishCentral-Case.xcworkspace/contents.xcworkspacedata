@@ -4,4 +4,11 @@
    <FileRef
       location = "group:EnglishCentral-Case.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:Kits"
+      name = "Kits">
+      <FileRef
+         location = "group:CommonKit/CommonKit.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

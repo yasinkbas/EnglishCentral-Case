@@ -17,21 +17,7 @@
                BlueprintIdentifier = "77A705E112BA78834D2901D0"
                BuildableName = "CommonKit.framework"
                BlueprintName = "CommonKit"
-               ReferencedContainer = "container:Kits/CommonKit/CommonKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3803BC2579EB788218F63BBE"
-               BuildableName = "EnglishCentral_Case.app"
-               BlueprintName = "EnglishCentral-Case"
-               ReferencedContainer = "container:EnglishCentral-Case.xcodeproj">
+               ReferencedContainer = "container:CommonKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -60,7 +46,7 @@
             BlueprintIdentifier = "77A705E112BA78834D2901D0"
             BuildableName = "CommonKit.framework"
             BlueprintName = "CommonKit"
-            ReferencedContainer = "container:Kits/CommonKit/CommonKit.xcodeproj">
+            ReferencedContainer = "container:CommonKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -76,7 +62,7 @@
             BlueprintIdentifier = "77A705E112BA78834D2901D0"
             BuildableName = "CommonKit.framework"
             BlueprintName = "CommonKit"
-            ReferencedContainer = "container:Kits/CommonKit/CommonKit.xcodeproj">
+            ReferencedContainer = "container:CommonKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
