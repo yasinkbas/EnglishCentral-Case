@@ -14,10 +14,17 @@ let dependencies: [TargetDependency] = {
         .package(product: "UILab"),
     ])
     
-    // Internal
+    // Internal Kits
     dependencies.append(contentsOf: [
         .project(target: "CommonKit", path: .relativeToManifest("Kits/CommonKit")),
-        .project(target: "NetworkKit", path: .relativeToManifest("Kits/NetworkKit"))
+        .project(target: "NetworkKit", path: .relativeToManifest("Kits/NetworkKit")),
+        .project(target: "DependencyManagerKit", path: .relativeToManifest("Kits/DependencyManagerKit"))
+    ])
+    
+    // Internal Modules
+    dependencies.append(contentsOf: [
+        .project(target: "MapModule", path: .relativeToManifest("Modules/MapModule")),
+        .project(target: "HomeModule", path: .relativeToManifest("Modules/HomeModule"))
     ])
     return dependencies
 }()
