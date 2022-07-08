@@ -16,7 +16,8 @@ let dependencies: [TargetDependency] = {
     
     // Internal
     dependencies.append(contentsOf: [
-        .project(target: "CommonKit", path: .relativeToManifest("Kits/CommonKit"))
+        .project(target: "CommonKit", path: .relativeToManifest("Kits/CommonKit")),
+        .project(target: "NetworkKit", path: .relativeToManifest("Kits/NetworkKit"))
     ])
     return dependencies
 }()

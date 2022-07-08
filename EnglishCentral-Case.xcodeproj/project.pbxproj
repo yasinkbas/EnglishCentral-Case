@@ -13,10 +13,12 @@
 		4E94E4C7748F88A91FE66AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC41CCB066F52BF71B161322 /* Assets.xcassets */; };
 		5C9B7223A4A08D7EEEDF0716 /* UILab in Frameworks */ = {isa = PBXBuildFile; productRef = 68999DF28312766A8535696B /* UILab */; };
 		630F55B9CED275C50BF9A306 /* NLab in Frameworks */ = {isa = PBXBuildFile; productRef = 65C9EE305287296DDB8772E8 /* NLab */; };
+		63ABCC7BEB64B1CD3C9A86E3 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27720707E0BE185B614ACA12 /* NetworkKit.framework */; };
 		7EEFA8B387AEFA0E4F53477C /* Assets+EnglishCentralCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C337261F33876403AD6BA3 /* Assets+EnglishCentralCase.swift */; };
 		8B71B0AA790D54967C1ACEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9CBB30C25C1C6B957872CC /* LaunchScreen.storyboard */; };
 		9C0544FA52AE8481FD272A68 /* CommonKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30183F25BA007DD38B7826B7 /* CommonKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A19444714687EB354EE54A13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B781098C4E54298A613B35 /* AppDelegate.swift */; };
+		D984DBDED753CE5CCBD83DB3 /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27720707E0BE185B614ACA12 /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9C0544FA52AE8481FD272A68 /* CommonKit.framework in Embed Frameworks */,
+				D984DBDED753CE5CCBD83DB3 /* NetworkKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27720707E0BE185B614ACA12 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30183F25BA007DD38B7826B7 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8472DD6D207F53E7029737 /* EnglishCentral-CaseTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "EnglishCentral-CaseTarget.xcconfig"; sourceTree = "<group>"; };
 		506636500050268FE0231DF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E1E04060E45050F760EFCAD /* CommonKit.framework in Frameworks */,
+				63ABCC7BEB64B1CD3C9A86E3 /* NetworkKit.framework in Frameworks */,
 				630F55B9CED275C50BF9A306 /* NLab in Frameworks */,
 				5C9B7223A4A08D7EEEDF0716 /* UILab in Frameworks */,
 			);
@@ -101,6 +106,7 @@
 			children = (
 				30183F25BA007DD38B7826B7 /* CommonKit.framework */,
 				F3A2896E3B5BB1DFD6F9B4B7 /* EnglishCentral_Case.app */,
+				27720707E0BE185B614ACA12 /* NetworkKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
