@@ -10,5 +10,8 @@
       <FileRef
          location = "group:CommonKit/CommonKit.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:NetworkKit/NetworkKit.xcodeproj">
+      </FileRef>
    </Group>
 </Workspace>
