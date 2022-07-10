@@ -18,7 +18,7 @@ class ViewController: UIViewController {
             let response = await PlacesAPI().autoSuggest(at: "40.74917,-73.98529", q: "chrysler").onError { error in
                 print(error.localizedDescription)
             }.startAsync()
-            print(response)
+            print(response?.results.last?.distance)
         }
     }
 

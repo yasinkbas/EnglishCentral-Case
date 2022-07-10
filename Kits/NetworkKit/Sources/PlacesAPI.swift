@@ -14,7 +14,7 @@ public struct PlacesAPI {
     
     public init() { }
     
-    public func autoSuggest(at: String, q: String) -> NLTaskDirector<Empty, Empty> {
+    public func autoSuggest(at: String, q: String) -> NLTaskDirector<APIResponse<AutoSuggestResponse>, Empty> {
         NLTaskPoint(client: client)
             .path("autosuggest")
             .method(.get)
