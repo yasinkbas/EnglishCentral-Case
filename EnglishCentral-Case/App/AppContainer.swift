@@ -33,7 +33,6 @@ final class AppContainer {
         }
         let response: Response = try! PropertyListHandler().read(fileName: "APIKeys")
         NetworkConfigs.register(placesApiKey: response.placesApiKey)
-//        trendService = Service(client: NLClient(baseURL: URL(string: "https://api.trendyol.com/")!), window: window, dispatchMain: DispatchQueue.main)
     }
     
     private func configureUILab() {
