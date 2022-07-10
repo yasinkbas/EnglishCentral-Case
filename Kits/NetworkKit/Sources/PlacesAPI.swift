@@ -1,5 +1,5 @@
 //
-//  SearchAPI.swift
+//  PlacesAPI.swift
 //  NetworkKit
 //
 //  Created by Yasin Akbas on 8.07.2022.
@@ -12,7 +12,9 @@ import NLab
 public struct PlacesAPI {
     private let client = NLClient(baseURL: .init(string: "https://places.ls.hereapi.com/places/v1/")!)
     
-    func autoSuggest(at: String, q: String) -> NLTaskDirector<Empty, Empty> {
+    public init() { }
+    
+    public func autoSuggest(at: String, q: String) -> NLTaskDirector<Empty, Empty> {
         NLTaskPoint(client: client)
             .path("autosuggest")
             .method(.get)
