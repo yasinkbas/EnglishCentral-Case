@@ -9,8 +9,16 @@
 import CommonKit
 import NLab
 
-public struct SearchAPI {
-    func create() -> Search {
-        return Search()
+public struct PlacesAPI {
+    private let client = NLClient(baseURL: .init(string: "https://places.ls.hereapi.com/places/v1/")!)
+    
+    func autoSuggest(at: String, q: String) -> NLTaskDirector<Empty, Empty> {
+        NLTaskPoint(client: client)
+            .path("autosuggest")
+            .method(.get)
+            .addParameter(.init(name: "at", value: at))
+            .addParameter(.init(name: "q", value: q))
+            .addParameter(.init(name: "apiKey", value: NetworkConfigs.placesApiKey))
+            .build().and.direct()
     }
 }
