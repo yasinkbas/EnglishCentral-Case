@@ -52,6 +52,7 @@ let appTarget = Target(
         "EnglishCentral-Case/**/*.m"
     ],
     resources: [
+        "APIKeys.plist",
         "EnglishCentral-Case/Resources/**",
         "EnglishCentral-Case/**/*.storyboard", // launch storyboard
         "EnglishCentral-Case/**/*.xib", // not necessary but can stay for now
