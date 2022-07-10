@@ -1,6 +1,6 @@
 ### Xcode ###
-Frameworks/
 Derived**/
+APIKeys.plist
 build/
 *.pbxuser
 !default.pbxuser
