@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import DependencyManagerKit
 
 final class AppRouter {
+    @Dependency var homeModule: HomeModuleInterface
+    
     let window: UIWindow?
     
     init(window: UIWindow?) {
@@ -16,8 +19,9 @@ final class AppRouter {
     }
     
     func initializeRootViewController() {
-        let initialViewController = ViewController()
-        let navigationController = UINavigationController(rootViewController: initialViewController)
+        let navigationController = UINavigationController()
+        let homeViewController = homeModule.homeViewController(with: navigationController)
+        navigationController.setViewControllers([homeViewController], animated: false)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

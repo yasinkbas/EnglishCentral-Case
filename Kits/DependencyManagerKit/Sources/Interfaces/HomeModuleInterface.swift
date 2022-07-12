@@ -10,5 +10,5 @@ import UIKit
 import CommonKit
 
 public protocol HomeModuleInterface {
-    func homeViewController(with navigationController: UINavigationController?, arguments: HomePresenterArguments) -> UIViewController
+    func homeViewController(with navigationController: UINavigationController?) -> UIViewController
 }

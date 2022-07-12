@@ -15,8 +15,12 @@ let project = Project(
                 "Sources/**/*.m",
                 "Sources/**/*.docc"
             ],
-        dependencies: [
-            .project(target: "CommonKit", path: .relativeToManifest("../../Kits/CommonKit")),
-            .project(target: "DependencyManagerKit", path: .relativeToManifest("../../Kits/DependencyManagerKit")),
-        ])
+            dependencies: [
+                .project(target: "CommonKit", path: .relativeToManifest("../../Kits/CommonKit")),
+                .project(target: "DependencyManagerKit", path: .relativeToManifest("../../Kits/DependencyManagerKit")),
+                .project(target: "NetworkKit", path: .relativeToManifest("../../Kits/NetworkKit")),
+                .project(target: "MapViewKit", path: .relativeToManifest("../../Kits/MapViewKit")),
+                .package(product: "NLab"),
+                .package(product: "UILab")
+            ])
     ])

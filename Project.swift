@@ -18,12 +18,12 @@ let dependencies: [TargetDependency] = {
     dependencies.append(contentsOf: [
         .project(target: "CommonKit", path: .relativeToManifest("Kits/CommonKit")),
         .project(target: "NetworkKit", path: .relativeToManifest("Kits/NetworkKit")),
-        .project(target: "DependencyManagerKit", path: .relativeToManifest("Kits/DependencyManagerKit"))
+        .project(target: "DependencyManagerKit", path: .relativeToManifest("Kits/DependencyManagerKit")),
+        .project(target: "MapViewKit", path: .relativeToManifest("Kits/MapViewKit"))
     ])
     
     // Internal Modules
     dependencies.append(contentsOf: [
-        .project(target: "MapModule", path: .relativeToManifest("Modules/MapModule")),
         .project(target: "HomeModule", path: .relativeToManifest("Modules/HomeModule"))
     ])
     return dependencies
@@ -45,7 +45,8 @@ let appTarget = Target(
     product: .app,
     bundleId: "com.yasinkbas.EnglishCentral-Case",
     infoPlist: .extendingDefault(with: [
-        "UILaunchScreen": [:]
+        "UILaunchScreen": [:],
+        "NSLocationWhenInUseUsageDescription" : "Needs your location to show you near places"
     ]),
     sources: [
         "EnglishCentral-Case/**/*.swift",
