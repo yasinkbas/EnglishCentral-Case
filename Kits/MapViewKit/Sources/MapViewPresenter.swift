@@ -6,7 +6,7 @@
 //  Copyright © 2022 com.yasinkbas.MapViewKit. All rights reserved.
 //
 
-import Foundation
+import MapKit
 
 public protocol MapViewPresenterInterface: AnyObject {
     func load()
@@ -21,12 +21,32 @@ public class MapViewPresenter {
         self.view = view
         self.locationManager = locationManager
     }
+    
+    private func handleLocationError(error: LocationManager.Error?) {
+        
+    }
 }
 
 // MARK: - MapViewPresenterInterface
 extension MapViewPresenter: MapViewPresenterInterface {
     public func load() {
         view?.prepareUI()
+        locationManager.setUp(with: self)
         locationManager.start()
+        
+        
+    }
+}
+
+// MARK: - LocationManagerDelegate
+extension MapViewPresenter: LocationManagerDelegate {
+    public func locationManager(_ center: CLLocationCoordinate2D?, error: LocationManager.Error?) {
+        if let error {
+            handleLocationError(error: error)
+        }
+        
+        guard let center else { return }
+        let region = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        view?.centerUserLocation(region: region)
     }
 }

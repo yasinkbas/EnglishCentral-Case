@@ -13,6 +13,8 @@ import CommonKit
 
 public protocol MapViewViewInterface: AnyObject {
     func prepareUI()
+    func centerUserLocation(region: MKCoordinateRegion)
+    func addAnnotation(_ annotation: MKPointAnnotation)
 }
 
 public class MapView: UIView {
@@ -24,6 +26,8 @@ public class MapView: UIView {
     
     lazy var coreMapView: MKMapView = {
         let mapView = MKMapView()
+        mapView.delegate = self
+        mapView.showsUserLocation = true
         return mapView
     }()
 }
@@ -33,4 +37,18 @@ extension MapView: MapViewViewInterface {
     public func prepareUI() {
         coreMapView.embed(in: self)
     }
+    
+    public func centerUserLocation(region: MKCoordinateRegion) {
+        // TODO: update parameter as region
+        coreMapView.setRegion(region, animated: true)
+    }
+    
+    public func addAnnotation(_ annotation: MKPointAnnotation) {
+        coreMapView.addAnnotation(annotation)
+    }
+}
+
+// MARK: - MKMapViewDelegate
+extension MapView: MKMapViewDelegate {
+    
 }
