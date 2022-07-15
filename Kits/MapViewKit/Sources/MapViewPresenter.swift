@@ -31,7 +31,7 @@ public class MapViewPresenter {
 extension MapViewPresenter: MapViewPresenterInterface {
     public func load() {
         view?.prepareUI()
-        locationManager.setUp(with: self)
+        locationManager.configure(with: self)
         locationManager.start()
         
         

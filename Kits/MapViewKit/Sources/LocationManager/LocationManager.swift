@@ -15,7 +15,7 @@ public protocol LocationManagerDelegate: AnyObject {
 
 public protocol LocationManagerInterface: AnyObject {
     func start()
-    func setUp(with delegate: LocationManagerDelegate)
+    func configure(with delegate: LocationManagerDelegate)
 }
 
 extension LocationManager {
@@ -46,7 +46,7 @@ public class LocationManager: NSObject {
         }
     }
     
-    public func setUp(with delegate: LocationManagerDelegate) {
+    public func configure(with delegate: LocationManagerDelegate) {
         self.delegate = delegate
         if CLLocationManager.locationServicesEnabled() {
             clLocationManager.delegate = self
