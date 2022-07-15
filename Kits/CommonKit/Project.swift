@@ -14,7 +14,11 @@ let project = Project(
                 "Sources/**/*.swift",
                 "Sources/**/*.m",
                 "Sources/**/*.docc"
-            ], dependencies: [
-
+            ],
+            resources: [
+                "Sources/**/*.xcassets"
+            ],
+            dependencies: [
+                .package(product: "UILab")
             ])
     ])

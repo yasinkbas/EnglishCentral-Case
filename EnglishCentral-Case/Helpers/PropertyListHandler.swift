@@ -15,7 +15,7 @@ final class PropertyListHandler {
     }
     
     func read<T: Decodable>(fileName: String) throws -> T {
-        guard let url = Bundle.main.url(forResource: "APIKeys", withExtension: "plist") else {
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "plist") else {
             throw PropertyListError.pathNotFound
         }
         do {

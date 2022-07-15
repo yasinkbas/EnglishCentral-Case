@@ -16,7 +16,7 @@ public class HomeModule {
 
 // MARK: - HomeModuleInterface
 extension HomeModule: HomeModuleInterface {
-    public func homeViewController(with navigationController: UINavigationController?, arguments: HomePresenterArguments) -> UIViewController {
-        HomeRouter.createModule(using: navigationController, arguments: arguments)
+    public func homeViewController(with navigationController: UINavigationController?) -> UIViewController {
+        HomeRouter.createModule(using: navigationController)
     }
 }

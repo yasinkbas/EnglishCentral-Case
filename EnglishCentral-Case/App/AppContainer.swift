@@ -18,13 +18,11 @@ final class AppContainer {
     init(window: UIWindow?) {
         self.window = window
         router = AppRouter(window: window)
-        configureNavigationController()
         configureService()
         configureUILab()
-    }
-    
-    private func configureNavigationController() {
-//        UINavigationBar.appearance().isTranslucent = false
+        forceToDarkMode()
+        
+        DependencyHandler().registerDependencies()
     }
     
     private func configureService() {
@@ -37,5 +35,11 @@ final class AppContainer {
     
     private func configureUILab() {
         UILab.Settings.debugMonitoringType = .verbose
+    }
+    
+    private func forceToDarkMode() {
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .dark
+        }
     }
 }

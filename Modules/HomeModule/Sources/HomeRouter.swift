@@ -21,13 +21,12 @@ final class HomeRouter {
         self.navigationController = navigationController
     }
     
-    static func createModule(using navigationController: UINavigationController? = nil, arguments: HomePresenterArguments) -> HomeViewController {
+    static func createModule(using navigationController: UINavigationController?) -> HomeViewController {
         let view = HomeViewController()
         let interactor = HomeInteractor()
         let router = HomeRouter(with: navigationController)
-        let presenter = HomePresenter(view: view, router: router, interactor: interactor, arguments: arguments)
+        let presenter = HomePresenter(view: view, router: router, interactor: interactor)
         view.presenter = presenter
-        interactor.output = presenter
         return view
     }
 }

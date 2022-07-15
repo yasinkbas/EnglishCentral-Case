@@ -8,7 +8,6 @@
 
 import DependencyManagerKit
 import HomeModule
-import MapModule
 
 final class DependencyHandler {
     func registerDependencies() {
