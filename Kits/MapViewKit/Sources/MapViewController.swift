@@ -28,6 +28,7 @@ public class MapView: UIView {
         let mapView = MKMapView()
         mapView.delegate = self
         mapView.showsUserLocation = true
+        mapView.showsCompass = false
         return mapView
     }()
 }
@@ -39,7 +40,6 @@ extension MapView: MapViewViewInterface {
     }
     
     public func centerUserLocation(region: MKCoordinateRegion) {
-        // TODO: update parameter as region
         coreMapView.setRegion(region, animated: true)
     }
     

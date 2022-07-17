@@ -35,7 +35,10 @@ public class LocationManager: NSObject {
             manager.requestWhenInUseAuthorization()
         case .restricted, .denied:
             break // Show alert
-        case .authorizedAlways, .authorizedWhenInUse:
+        case .authorizedAlways:
+            fatalError()
+                break
+        case .authorizedWhenInUse:
             if let center = manager.location?.coordinate {
                 delegate?.locationManager(center, error: nil)
             } else {

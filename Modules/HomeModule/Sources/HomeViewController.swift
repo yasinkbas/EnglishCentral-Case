@@ -48,6 +48,8 @@ extension HomeViewController: HomeViewInterface {
         
         view.addSubview(navigationView)
         navigationView.set(.leadingOf(view, 15), .top(view.safeAreaLayoutGuide.topAnchor, 15), .trailingOf(view, 15), .height(50))
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
     }
     
     func prepareNavigationView() -> HomeNavigationViewPresenter {

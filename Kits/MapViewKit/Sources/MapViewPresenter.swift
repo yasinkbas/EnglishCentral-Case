@@ -15,6 +15,8 @@ public protocol MapViewPresenterInterface: AnyObject {
 public class MapViewPresenter {
     private weak var view: MapViewViewInterface?
     private let locationManager: LocationManagerInterface
+    private var isFirstLoad: Bool = true
+    private var userCurrentLocation: CLLocationCoordinate2D?
 
     public init(view: MapViewViewInterface,
                 locationManager: LocationManagerInterface = LocationManager()) {
@@ -24,6 +26,12 @@ public class MapViewPresenter {
     
     private func handleLocationError(error: LocationManager.Error?) {
         
+    }
+    
+    private func centerUserCurrentLocation() {
+        guard let userCurrentLocation else { return }
+        let region = MKCoordinateRegion(center: userCurrentLocation, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        view?.centerUserLocation(region: region)
     }
 }
 
@@ -46,7 +54,10 @@ extension MapViewPresenter: LocationManagerDelegate {
         }
         
         guard let center else { return }
-        let region = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
-        view?.centerUserLocation(region: region)
+        userCurrentLocation = center
+        if isFirstLoad {
+            isFirstLoad = false
+            centerUserCurrentLocation()
+        }
     }
 }

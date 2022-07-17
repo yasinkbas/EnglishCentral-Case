@@ -29,16 +29,6 @@ let dependencies: [TargetDependency] = {
     return dependencies
 }()
 
-let projectSettings = Settings(
-    debug: Configuration(xcconfig: Path("configs/EnglishCentral-CaseProject.xcconfig")),
-    release: Configuration(xcconfig: Path("configs/EnglishCentral-CaseProject.xcconfig")),
-    defaultSettings: .none)
-
-let targetSettings = Settings(
-    debug: Configuration(xcconfig: Path("configs/EnglishCentral-CaseTarget.xcconfig")),
-    release: Configuration(xcconfig: Path("configs/EnglishCentral-CaseTarget.xcconfig")),
-    defaultSettings: .none)
-
 let appTarget = Target(
     name: "EnglishCentral-Case",
     platform: .iOS,
@@ -59,8 +49,7 @@ let appTarget = Target(
         "EnglishCentral-Case/**/*.xib", // not necessary but can stay for now
         "EnglishCentral-Case/**/*.xcassets",
     ],
-    dependencies: dependencies,
-    settings: targetSettings
+    dependencies: dependencies
 )
 
 let unitTestTarget = Target(
@@ -87,7 +76,6 @@ let project = Project(
     name: "EnglishCentral-Case",
     organizationName: "com.yasinkbas.EnglishCentral-Case",
     packages: packages,
-    settings: projectSettings,
     targets: [
         appTarget,
         //        unitTestTarget,
