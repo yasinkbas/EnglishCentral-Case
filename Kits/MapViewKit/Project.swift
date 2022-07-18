@@ -16,6 +16,7 @@ let project = Project(
             ],
         dependencies: [
             .project(target: "CommonKit", path: .relativeToManifest("../../Kits/CommonKit")),
+            .project(target: "CoreViewKit", path: .relativeToManifest("../../Kits/CoreViewKit")),
             .package(product: "UILab")
         ])
     ])

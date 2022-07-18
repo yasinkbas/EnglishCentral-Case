@@ -42,6 +42,5 @@ extension HomeNavigationViewPresenter: HomeNavigationViewPresenterInterface {
     
     func searchBar(textDidChange searchText: String) {
         self.searchText = searchText
-        print("--> textDidChange: \(searchText)")
     }
 }

@@ -9,7 +9,10 @@
 import MapKit
 
 public protocol MapViewPresenterInterface: AnyObject {
+    var currentLocation: CLLocationCoordinate2D? { get }
+    
     func load()
+    func getDistance(latitude: Double, longitude: Double) async throws -> Int
 }
 
 public class MapViewPresenter {
@@ -24,10 +27,6 @@ public class MapViewPresenter {
         self.locationManager = locationManager
     }
     
-    private func handleLocationError(error: LocationManager.Error?) {
-        
-    }
-    
     private func centerUserCurrentLocation() {
         guard let userCurrentLocation else { return }
         let region = MKCoordinateRegion(center: userCurrentLocation, latitudinalMeters: 1000, longitudinalMeters: 1000)
@@ -37,20 +36,24 @@ public class MapViewPresenter {
 
 // MARK: - MapViewPresenterInterface
 extension MapViewPresenter: MapViewPresenterInterface {
+    public var currentLocation: CLLocationCoordinate2D? { userCurrentLocation }
+    
     public func load() {
         view?.prepareUI()
         locationManager.configure(with: self)
         locationManager.start()
-        
-        
+    }
+    
+    public func getDistance(latitude: Double, longitude: Double) async throws -> Int {
+        try await locationManager.getDistance(latitude: latitude, longitude: longitude)
     }
 }
 
 // MARK: - LocationManagerDelegate
 extension MapViewPresenter: LocationManagerDelegate {
-    public func locationManager(_ center: CLLocationCoordinate2D?, error: LocationManager.Error?) {
+    public func locationManager(_ center: CLLocationCoordinate2D?, error: LocationManager.LocationManagerError?) {
         if let error {
-            handleLocationError(error: error)
+            view?.showAlert(message: error.description)
         }
         
         guard let center else { return }
