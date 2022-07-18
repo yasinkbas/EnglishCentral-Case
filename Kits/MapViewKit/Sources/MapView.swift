@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  MapView.swift
 //  MapViewKit
 //
 //  Created by Yasin Akbas on 12.07.2022.
@@ -10,11 +10,14 @@ import UIKit
 import MapKit
 import UILab
 import CommonKit
+import CoreViewKit
 
-public protocol MapViewViewInterface: AnyObject {
+public protocol MapViewViewInterface: AlertShowable {
     func prepareUI()
     func centerUserLocation(region: MKCoordinateRegion)
     func addAnnotation(_ annotation: MKPointAnnotation)
+    func removeAllAnnotations()
+    func fitAnnotations()
 }
 
 public class MapView: UIView {
@@ -44,11 +47,21 @@ extension MapView: MapViewViewInterface {
     }
     
     public func addAnnotation(_ annotation: MKPointAnnotation) {
-        coreMapView.addAnnotation(annotation)
+        DispatchQueue.main.async {
+            self.coreMapView.addAnnotation(annotation)
+        }
+    }
+    
+    public func removeAllAnnotations() {
+        DispatchQueue.main.async {
+            self.coreMapView.removeAnnotations(self.coreMapView.annotations)
+        }
+    }
+    
+    public func fitAnnotations() {
+        coreMapView.showAnnotations(coreMapView.annotations, animated: true)
     }
 }
 
 // MARK: - MKMapViewDelegate
-extension MapView: MKMapViewDelegate {
-    
-}
+extension MapView: MKMapViewDelegate { }

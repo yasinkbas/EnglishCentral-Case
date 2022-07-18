@@ -10,11 +10,17 @@ import UIKit
 import UILab
 import DependencyManagerKit
 import MapViewKit
+import CoreViewKit
+import MapKit
 
-protocol HomeViewInterface: AnyObject {
+protocol HomeViewInterface: LoadingShowable, AlertShowable {
     func prepareUI()
     func prepareNavigationView() -> HomeNavigationViewPresenter
     func prepareMapView() -> MapViewPresenterInterface
+    func addAnnotation(_ annotation: MKPointAnnotation)
+    func removeAllAnnotations()
+    func fitMapAnnotations()
+    func hideKeyboard()
 }
 
 extension HomeViewController {
@@ -65,5 +71,21 @@ extension HomeViewController: HomeViewInterface {
         let presenter = MapViewPresenter(view: mapView)
         mapView.presenter = presenter
         return presenter
+    }
+    
+    func addAnnotation(_ annotation: MKPointAnnotation) {
+        mapView.addAnnotation(annotation)
+    }
+    
+    func removeAllAnnotations() {
+        mapView.removeAllAnnotations()
+    }
+    
+    func fitMapAnnotations() {
+        mapView.fitAnnotations()
+    }
+    
+    func hideKeyboard() {
+        view.endEditing(true)
     }
 }

@@ -78,4 +78,8 @@ extension HomeNavigationView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         presenter.searchBar(textDidChange: searchText)
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        presenter.searchButtonTapped()
+    }
 }

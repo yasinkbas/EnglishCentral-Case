@@ -17,6 +17,7 @@ let project = Project(
             ],
             dependencies: [
                 .project(target: "CommonKit", path: .relativeToManifest("../../Kits/CommonKit")),
+                .project(target: "CoreViewKit", path: .relativeToManifest("../../Kits/CoreViewKit")),
                 .project(target: "DependencyManagerKit", path: .relativeToManifest("../../Kits/DependencyManagerKit")),
                 .project(target: "NetworkKit", path: .relativeToManifest("../../Kits/NetworkKit")),
                 .project(target: "MapViewKit", path: .relativeToManifest("../../Kits/MapViewKit")),

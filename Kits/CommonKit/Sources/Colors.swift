@@ -13,5 +13,3 @@ public enum Colors {
     public static let darkGray = #colorLiteral(red: 0.2295667827, green: 0.239538759, blue: 0.2002622485, alpha: 1)
     public static let dark = #colorLiteral(red: 0.1769858301, green: 0.1802853644, blue: 0.1573379636, alpha: 1)
 }
-
-
