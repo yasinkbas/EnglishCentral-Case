@@ -51,7 +51,6 @@ final class HomePresenter: NSObject {
                       let mapModule else { continue }
                 taskGroup.addTask {
                     let distance = try await mapModule.getDistance(latitude: latitude, longitude: longitude)
-                    print("-->place: \(place.title) distance:\(distance)")
                     return (place, distance)
                 }
             }

@@ -64,7 +64,6 @@ public class LocationManager: NSObject {
     }
     
     private func calculateDistancefrom(sourceLocation: MKMapItem, destinationLocation: MKMapItem) async -> TimeInterval{
-        
         let request: MKDirections.Request = MKDirections.Request()
         
         request.source = sourceLocation

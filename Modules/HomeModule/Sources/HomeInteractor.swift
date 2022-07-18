@@ -16,8 +16,6 @@ protocol HomeInteractorInterface: AnyObject {
 
 final class HomeInteractor: HomeInteractorInterface {
     func fetchAutoSuggests(at: String, q: String) async -> APIResponse<AutoSuggestResponse>? {
-        let data = await PlacesAPI().autoSuggest(at: at, q: q).startAsync()
-        print("data:\(data)")
-        return data
+        await PlacesAPI().autoSuggest(at: at, q: q).startAsync()
     }
 }
