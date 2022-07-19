@@ -14,21 +14,32 @@ public protocol MapViewPresenterInterface: AnyObject {
     func load()
 }
 
+extension MapViewPresenter {
+    enum Constant {
+        static let latitudinalMeters: Double = 1000
+        static let longitudinalMeters: Double = 1000
+    }
+}
+
 public class MapViewPresenter {
-    private weak var view: MapViewViewInterface?
+    private weak var view: MapViewInterface?
     private let locationManager: LocationManagerInterface
     private var isFirstLoad: Bool = true
     private var userCurrentLocation: CLLocationCoordinate2D?
 
-    public init(view: MapViewViewInterface,
-                locationManager: LocationManagerInterface = LocationManager()) {
+    public init(
+        view: MapViewInterface,
+        locationManager: LocationManagerInterface = LocationManager()
+    ) {
         self.view = view
         self.locationManager = locationManager
     }
     
     private func centerUserCurrentLocation() {
         guard let userCurrentLocation else { return }
-        let region = MKCoordinateRegion(center: userCurrentLocation, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        let region = MKCoordinateRegion(center: userCurrentLocation,
+                                        latitudinalMeters: Constant.latitudinalMeters,
+                                        longitudinalMeters: Constant.longitudinalMeters)
         view?.centerUserLocation(region: region)
     }
 }

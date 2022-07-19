@@ -24,7 +24,7 @@ public final class Dependency<Value> {
     
     public var wrappedValue: Value {
         get {
-            if let value = value {
+            if let value {
                 return value
             } else {
                 let value: Value = engine.read(for: Value.self)

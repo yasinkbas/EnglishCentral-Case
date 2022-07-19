@@ -52,7 +52,7 @@ final class HomeNavigationView: UIView {
     }
 }
 
-// MARK: - HomeNavigationViewViewInterface
+// MARK: - HomeNavigationViewInterface
 extension HomeNavigationView: HomeNavigationViewInterface {
     func prepareUI() {
         backgroundColor = .clear

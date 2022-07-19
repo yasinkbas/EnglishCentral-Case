@@ -30,8 +30,6 @@ extension LocationManager {
                 return "Location services are not available. Please try to enable location services on settings."
             case .locationNotObtained:
                 return "Your current location could not obtained. Please try again later."
-            default:
-                return ""
             }
         }
     }
