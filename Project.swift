@@ -78,8 +78,7 @@ let project = Project(
     organizationName: "com.yasinkbas.EnglishCentral-Case",
     packages: packages,
     targets: [
-        appTarget,
-        unitTestTarget,
+        appTarget
         //        uiTestTarget
     ]
 )
