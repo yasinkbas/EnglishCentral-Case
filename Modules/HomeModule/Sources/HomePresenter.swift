@@ -22,14 +22,19 @@ protocol HomePresenterInterface: AnyObject {
 extension HomePresenter {
     enum Constant {
         static let suggestedPlacesCountThreshold: Int = 10
+        static let latitudeIndexPosition: Int = 0
+        static let longitudeIndexPosition: Int = 1
     }
 }
 
+typealias Place = AutoSuggestResponse
+
+@MainActor
 final class HomePresenter: NSObject {   
     private weak var view: HomeViewInterface?
     private let router: HomeRouterInterface
     private let interactor: HomeInteractorInterface
-    private var distanceOfPlaces: [AutoSuggestResponse: Int] = [:]
+    private var distanceOfPlaces: [Place: Int] = [:]
     private var mapModule: MapViewPresenterInterface?
     private var homeNavigationModule: HomeNavigationViewPresenterInterface?
     
@@ -43,11 +48,39 @@ final class HomePresenter: NSObject {
         self.interactor = interactor
     }
     
-    private func sortPlacesByDistance(places: [AutoSuggestResponse]) async throws -> [AutoSuggestResponse: Int] {
-        try await withThrowingTaskGroup(of: (AutoSuggestResponse, Int).self, returning: [AutoSuggestResponse: Int].self, body: { taskGroup in
+    func addAnnotation(for place: Place) {
+        guard let latitude = place.position?[safe: Constant.latitudeIndexPosition],
+              let longitude = place.position?[safe: Constant.longitudeIndexPosition] else { return }
+        let annotation = MKPointAnnotation()
+        annotation.title = place.title
+        annotation.subtitle = place.categoryTitle
+        annotation.coordinate = .init(latitude: latitude, longitude: longitude)
+        view?.addAnnotation(annotation)
+    }
+    
+    func showNearestPlaces(with places: [Place], threshold: Int) async {
+        do {
+            distanceOfPlaces = try await sortPlacesByDistance(places: places)
+        } catch {
+            guard let message = (error as? LocationManager.LocationManagerError)?.description else { return }
+            view?.showAlert(message: message)
+        }
+        
+        let nearestPlaces = Array(distanceOfPlaces.keys).sorted(by: { distanceOfPlaces[$0]! < distanceOfPlaces[$1]! })
+        let placesCountThreshold = nearestPlaces.count > threshold
+        ? threshold
+        : nearestPlaces.count
+        Array((nearestPlaces.prefix(placesCountThreshold))).forEach { place in
+            addAnnotation(for: place)
+        }
+    }
+    
+    func sortPlacesByDistance(places: [Place]) async throws -> [Place: Int] {
+        try await withThrowingTaskGroup(of: (place: Place, distance: Int).self,
+                                        returning: [Place: Int].self, body: { taskGroup in
             for place in places {
-                guard let latitude = place.position?[safe: 0],
-                      let longitude = place.position?[safe: 1],
+                guard let latitude = place.position?[safe: Constant.latitudeIndexPosition],
+                      let longitude = place.position?[safe: Constant.longitudeIndexPosition],
                       let mapModule else { continue }
                 taskGroup.addTask {
                     let distance = try await mapModule.getDistance(latitude: latitude, longitude: longitude)
@@ -55,42 +88,19 @@ final class HomePresenter: NSObject {
                 }
             }
             
-            var result = [AutoSuggestResponse : Int]()
+            var result = [Place : Int]()
             for try await taskResult in taskGroup {
-                result[taskResult.0] = taskResult.1
+                result[taskResult.place] = taskResult.distance
             }
             return result
         })
     }
     
-    func fetchAutoSuggests(at: String, q: String) {
-        Task {
-            guard let places = await interactor.fetchAutoSuggests(at: at, q: q)?.results else { return }
-            do {
-                distanceOfPlaces = try await sortPlacesByDistance(places: places)
-            } catch {
-                guard let message = (error as? LocationManager.LocationManagerError)?.description else { return }
-                view?.showAlert(message: message)
-            }
-            
-            let nearestPlaces = Array(self.distanceOfPlaces.keys).sorted(by: { self.distanceOfPlaces[$0]! < self.distanceOfPlaces[$1]! })
-            let count = nearestPlaces.count > 10
-            ? Constant.suggestedPlacesCountThreshold
-            : nearestPlaces.count
-            Array((nearestPlaces.prefix(count))).forEach { place in
-                guard let latitude = place.position?[safe: 0],
-                      let longitude = place.position?[safe: 1] else { return }
-                let annotation = MKPointAnnotation()
-                annotation.title = place.title
-                annotation.subtitle = place.categoryTitle
-                annotation.coordinate = .init(latitude: latitude, longitude: longitude)
-                self.view?.addAnnotation(annotation)
-            }
-            DispatchQueue.main.async {
-                self.view?.hideLoading()
-                self.view?.fitMapAnnotations()
-            }
-        }
+    func fetchAutoSuggests(at: String, q: String) async {
+        guard let places = await interactor.fetchAutoSuggests(at: at, q: q)?.results else { return }
+        await showNearestPlaces(with: places, threshold: Constant.suggestedPlacesCountThreshold)
+        view?.hideLoading()
+        view?.fitMapAnnotations()
     }
 }
 
@@ -114,6 +124,6 @@ extension HomePresenter: HomeNavigationViewPresenterDelegate {
         view?.showLoading()
         guard let userCurrentLocation = mapModule?.currentLocation,
               !searchText.isEmpty else { return }
-        fetchAutoSuggests(at: "\(userCurrentLocation.latitude),\(userCurrentLocation.longitude)", q: searchText)
+        Task { await fetchAutoSuggests(at: "\(userCurrentLocation.latitude),\(userCurrentLocation.longitude)", q: searchText) }
     }
 }

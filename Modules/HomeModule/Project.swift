@@ -23,5 +23,17 @@ let project = Project(
                 .project(target: "MapViewKit", path: .relativeToManifest("../../Kits/MapViewKit")),
                 .package(product: "NLab"),
                 .package(product: "UILab")
+            ]),
+        Target(
+            name: "HomeModuleTests",
+            platform: .iOS,
+            product: .unitTests,
+            bundleId: "com.yasinkbas.HomeModuleTests",
+            infoPlist: .default,
+            sources: [
+                "UnitTests/**"
+            ],
+            dependencies: [
+
             ])
     ])

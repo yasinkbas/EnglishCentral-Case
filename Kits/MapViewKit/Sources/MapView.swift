@@ -47,15 +47,11 @@ extension MapView: MapViewViewInterface {
     }
     
     public func addAnnotation(_ annotation: MKPointAnnotation) {
-        DispatchQueue.main.async {
-            self.coreMapView.addAnnotation(annotation)
-        }
+        coreMapView.addAnnotation(annotation)
     }
     
     public func removeAllAnnotations() {
-        DispatchQueue.main.async {
-            self.coreMapView.removeAnnotations(self.coreMapView.annotations)
-        }
+        coreMapView.removeAnnotations(coreMapView.annotations)
     }
     
     public func fitAnnotations() {

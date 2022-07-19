@@ -58,8 +58,8 @@ let unitTestTarget = Target(
     platform: .iOS,
     product: .unitTests,
     bundleId: "com.yasinkbas.EnglishCentral-CaseTests",
-    infoPlist: "EnglishCentral-CaseTests/Resources/Info.plist",
-    sources: ["EnglishCentral-CaseTests/Source/**"],
+    infoPlist: .default,
+    sources: ["UnitTests/**"],
     dependencies: [.target(name: "EnglishCentral-Case")]
 )
 
@@ -79,7 +79,7 @@ let project = Project(
     packages: packages,
     targets: [
         appTarget,
-        //        unitTestTarget,
+        unitTestTarget,
         //        uiTestTarget
     ]
 )

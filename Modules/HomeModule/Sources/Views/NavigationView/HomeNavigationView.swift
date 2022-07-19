@@ -13,12 +13,6 @@ protocol HomeNavigationViewInterface: AnyObject {
     func prepareUI()
 }
 
-extension HomeNavigationView {
-    enum Constants {
-        
-    }
-}
-
 final class HomeNavigationView: UIView {
     var presenter: HomeNavigationViewPresenterInterface! {
         didSet {

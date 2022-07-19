@@ -49,16 +49,11 @@ public class LocationManager: NSObject {
             manager.requestWhenInUseAuthorization()
         case .restricted, .denied:
             delegate?.locationManager(nil, error: .locationServicesNotEnabled)
-        case .authorizedAlways:
-            fatalError()
-                break
         case .authorizedWhenInUse:
             if let center = manager.location?.coordinate {
                 delegate?.locationManager(center, error: nil)
-            } else {
-                delegate?.locationManager(nil, error: .locationNotObtained)
             }
-        @unknown default:
+        default:
             break
         }
     }

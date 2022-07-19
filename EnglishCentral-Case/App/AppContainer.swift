@@ -38,8 +38,6 @@ final class AppContainer {
     }
     
     private func forceToDarkMode() {
-        if #available(iOS 13.0, *) {
-            window?.overrideUserInterfaceStyle = .dark
-        }
+        window?.overrideUserInterfaceStyle = .dark
     }
 }
