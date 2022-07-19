@@ -1,0 +1,306 @@
+{
+    "results": [
+        {
+            "title": "Dardenia (Dardenia Fish & Bread)",
+            "highlightedTitle": "Dardenia (Dardenia Fish & <b>Bread</b>)",
+            "vicinity": "Balkan Caddesi, 56<br/>34771 Fatih Sultan Mehmet, İstanbul",
+            "highlightedVicinity": "Balkan Caddesi, 56<br/>34771 Fatih Sultan Mehmet, İstanbul",
+            "position": [
+                41.02703,
+                29.1256
+            ],
+            "category": "restaurant",
+            "categoryTitle": "Restaurant",
+            "href": "https://places.ls.hereapi.com/places/v1/places/792jx7ps-8c37c0ae0aab0ac7501b9c3489a37bd4;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz01?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "792jx7ps-8c37c0ae0aab0ac7501b9c3489a37bd4",
+            "distance": 19110
+        },
+        {
+            
+        },
+        {
+            "position": [
+                -34.77536
+            ],
+        },
+        {
+            "title": "Bread's",
+            "highlightedTitle": "<b>Bread'</b>s",
+            "vicinity": "Sıraselviler Caddesi<br/>34433 Cihangir, İstanbul",
+            "highlightedVicinity": "Sıraselviler Caddesi<br/>34433 Cihangir, İstanbul",
+            "position": [
+                41.03257,
+                28.98363
+            ],
+            "category": "coffee-tea",
+            "categoryTitle": "Coffee/Tea",
+            "href": "https://places.ls.hereapi.com/places/v1/places/792sxk97-e0cd9eeb48f946f19a8d52d4aaefcdcc;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz0z?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "792sxk97-e0cd9eeb48f946f19a8d52d4aaefcdcc",
+            "distance": 7156
+        },
+        {
+            "title": "Bread's, Bahçelievler",
+            "highlightedTitle": "<b>Bread'</b>s, Bahçelievler",
+            "vicinity": "İzzettin Çalışırlar Caddesi<br/>34180 Bahçelievler Mahallesi, İstanbul",
+            "highlightedVicinity": "İzzettin Çalışırlar Caddesi<br/>34180 Bahçelievler Mahallesi, İstanbul",
+            "position": [
+                40.99949,
+                28.87007
+            ],
+            "category": "food-drink",
+            "categoryTitle": "Food & Drink",
+            "href": "https://places.ls.hereapi.com/places/v1/places/792sxk90-bed5a88ef26643c5b0f3eeb8046452a0;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz00?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "792sxk90-bed5a88ef26643c5b0f3eeb8046452a0",
+            "distance": 4554
+        },
+        {
+            "title": "Dardenia (Dardenia Fish & Bread)",
+            "highlightedTitle": "Dardenia (Dardenia Fish & <b>Bread</b>)",
+            "vicinity": "Balkan Caddesi, 56<br/>34771 Fatih Sultan Mehmet, İstanbul",
+            "highlightedVicinity": "Balkan Caddesi, 56<br/>34771 Fatih Sultan Mehmet, İstanbul",
+            "position": [
+                41.02703,
+                29.1256
+            ],
+            "category": "restaurant",
+            "categoryTitle": "Restaurant",
+            "href": "https://places.ls.hereapi.com/places/v1/places/792jx7ps-8c37c0ae0aab0ac7501b9c3489a37bd4;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz01?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "792jx7ps-8c37c0ae0aab0ac7501b9c3489a37bd4",
+            "distance": 19110
+        },
+        {
+            "title": "Bread's",
+            "highlightedTitle": "<b>Bread'</b>s",
+            "vicinity": "Fatih Sokak<br/>34718 Acıbadem, İstanbul",
+            "highlightedVicinity": "Fatih Sokak<br/>34718 Acıbadem, İstanbul",
+            "position": [
+                40.99988,
+                29.03245
+            ],
+            "category": "restaurant",
+            "categoryTitle": "Restaurant",
+            "href": "https://places.ls.hereapi.com/places/v1/places/792sxk9h-db52685f4fe84e86a076c3953eee9f99;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz02?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "792sxk9h-db52685f4fe84e86a076c3953eee9f99",
+            "distance": 11894
+        },
+        {
+            "title": "Mybread",
+            "highlightedTitle": "Mybread",
+            "vicinity": "Mevlevihane Caddesi<br/>34015 Merkezefendi, İstanbul",
+            "highlightedVicinity": "Mevlevihane Caddesi<br/>34015 Merkezefendi, İstanbul",
+            "position": [
+                41.01113,
+                28.90758
+            ],
+            "category": "restaurant",
+            "categoryTitle": "Restaurant",
+            "href": "https://places.ls.hereapi.com/places/v1/places/792jx7ps-fc21921fa27b0ef5025a2278c82bbf4e;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz03?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "792jx7ps-fc21921fa27b0ef5025a2278c82bbf4e",
+            "distance": 2689
+        },
+        {
+            "title": "Bread's",
+            "highlightedTitle": "<b>Bread'</b>s",
+            "vicinity": "Fatih Sokak, 1<br/>34718 Acıbadem, İstanbul",
+            "highlightedVicinity": "Fatih Sokak, 1<br/>34718 Acıbadem, İstanbul",
+            "position": [
+                40.99913,
+                29.03226
+            ],
+            "category": "restaurant",
+            "categoryTitle": "Restaurant",
+            "href": "https://places.ls.hereapi.com/places/v1/places/7928lxx5-d1a6ab4b146e0d3cc613f3990e3cf833;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz04?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "7928lxx5-d1a6ab4b146e0d3cc613f3990e3cf833",
+            "distance": 11906
+        },
+        {
+            "title": "Bay Bread",
+            "highlightedTitle": "Bay <b>Bread</b>",
+            "vicinity": "Terbıyık Sokak, 4<br/>34122 Cankurtaran, İstanbul",
+            "highlightedVicinity": "Terbıyık Sokak, 4<br/>34122 Cankurtaran, İstanbul",
+            "position": [
+                41.00561,
+                28.98077
+            ],
+            "category": "food-drink",
+            "categoryTitle": "Food & Drink",
+            "href": "https://places.ls.hereapi.com/places/v1/places/792sxk97-e8119eafbd444eb9a01a5a66162e21d0;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz05?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "792sxk97-e8119eafbd444eb9a01a5a66162e21d0",
+            "distance": 7616
+        },
+        {
+            "title": "Breadalbane",
+            "highlightedTitle": "<b>Bread</b>albane",
+            "vicinity": "Queens, Prince Edward Island<br/>Canada",
+            "highlightedVicinity": "Queens, Prince Edward Island<br/>Canada",
+            "position": [
+                46.35828,
+                -63.50131
+            ],
+            "category": "city-town-village",
+            "categoryTitle": "City, Town or Village",
+            "bbox": [
+                -63.54338,
+                46.33433,
+                -63.45758,
+                46.37528
+            ],
+            "href": "https://places.ls.hereapi.com/places/v1/places/loc-dmVyc2lvbj0xO3RpdGxlPUJyZWFkYWxiYW5lO2xhbmc9ZW47bGF0PTQ2LjM1ODI4O2xvbj0tNjMuNTAxMzE7Y2l0eT1CcmVhZGFsYmFuZTtwb3N0YWxDb2RlPUMwQTtjb3VudHJ5PUNBTjtzdGF0ZT1QcmluY2UrRWR3YXJkK0lzbGFuZDtzdGF0ZUNvZGU9UEU7Y291bnR5PVF1ZWVucztjYXRlZ29yeUlkPWNpdHktdG93bi12aWxsYWdlO3NvdXJjZVN5c3RlbT1pbnRlcm5hbDtwZHNDYXRlZ29yeUlkPTkwMC05MTAwLTAwMDA;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmYmJveD0tNjMuNTQzMzglMkM0Ni4zMzQzMyUyQy02My40NTc1OCUyQzQ2LjM3NTI4JnJhbms9MTA?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "address",
+            "id": "loc-dmVyc2lvbj0xO3RpdGxlPUJyZWFkYWxiYW5lO2xhbmc9ZW47bGF0PTQ2LjM1ODI4O2xvbj0tNjMuNTAxMzE7Y2l0eT1CcmVhZGFsYmFuZTtwb3N0YWxDb2RlPUMwQTtjb3VudHJ5PUNBTjtzdGF0ZT1QcmluY2UrRWR3YXJkK0lzbGFuZDtzdGF0ZUNvZGU9UEU7Y291bnR5PVF1ZWVucztjYXRlZ29yeUlkPWNpdHktdG93bi12aWxsYWdlO3NvdXJjZVN5c3RlbT1pbnRlcm5hbDtwZHNDYXRlZ29yeUlkPTkwMC05MTAwLTAwMDA",
+            "distance": 7028949
+        },
+        {
+            "title": "Bready",
+            "highlightedTitle": "<b>Bread</b>y",
+            "vicinity": "Strabane<br/>BT82 0<br/>United Kingdom",
+            "highlightedVicinity": "Strabane<br/>BT82 0<br/>United Kingdom",
+            "position": [
+                54.91524,
+                -7.41981
+            ],
+            "category": "administrative-region",
+            "categoryTitle": "Administrative Region",
+            "bbox": [
+                -7.44964,
+                54.88537,
+                -7.36066,
+                54.94113
+            ],
+            "href": "https://places.ls.hereapi.com/places/v1/places/loc-dmVyc2lvbj0xO3RpdGxlPUJyZWFkeTtsYW5nPWVuO2xhdD01NC45MTUyNDtsb249LTcuNDE5ODE7Y2l0eT1TdHJhYmFuZTtwb3N0YWxDb2RlPUJUODIrMDtjb3VudHJ5PUdCUjtkaXN0cmljdD1CcmVhZHk7c3RhdGU9Tm9ydGhlcm4rSXJlbGFuZDtjb3VudHk9Q291bnR5K1R5cm9uZTtjYXRlZ29yeUlkPWFkbWluaXN0cmF0aXZlLXJlZ2lvbjtzb3VyY2VTeXN0ZW09aW50ZXJuYWw7cGRzQ2F0ZWdvcnlJZD05MDAtOTQwMC0wMzk5;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmYmJveD0tNy40NDk2NCUyQzU0Ljg4NTM3JTJDLTcuMzYwNjYlMkM1NC45NDExMyZyYW5rPTEx?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "address",
+            "id": "loc-dmVyc2lvbj0xO3RpdGxlPUJyZWFkeTtsYW5nPWVuO2xhdD01NC45MTUyNDtsb249LTcuNDE5ODE7Y2l0eT1TdHJhYmFuZTtwb3N0YWxDb2RlPUJUODIrMDtjb3VudHJ5PUdCUjtkaXN0cmljdD1CcmVhZHk7c3RhdGU9Tm9ydGhlcm4rSXJlbGFuZDtjb3VudHk9Q291bnR5K1R5cm9uZTtjYXRlZ29yeUlkPWFkbWluaXN0cmF0aXZlLXJlZ2lvbjtzb3VyY2VTeXN0ZW09aW50ZXJuYWw7cGRzQ2F0ZWdvcnlJZD05MDAtOTQwMC0wMzk5",
+            "distance": 3070650
+        },
+        {
+            "title": "Reyhanoğlu Unlu Mamülleri (Cıty Bread House)",
+            "highlightedTitle": "Reyhanoğlu Unlu Mamülleri (Cıty <b>Bread</b> House)",
+            "vicinity": "Aydın Yuva Sokak<br/>34145 Kartaltepe, İstanbul",
+            "highlightedVicinity": "Aydın Yuva Sokak<br/>34145 Kartaltepe, İstanbul",
+            "position": [
+                40.99435,
+                28.87147
+            ],
+            "category": "restaurant",
+            "categoryTitle": "Restaurant",
+            "href": "https://places.ls.hereapi.com/places/v1/places/792jx7ps-f3ab494b82dd04591dc730b6e4727194;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz0xMg?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "792jx7ps-f3ab494b82dd04591dc730b6e4727194",
+            "distance": 4994
+        },
+        {
+            "title": "Breadsall",
+            "highlightedTitle": "<b>Bread</b>sall",
+            "vicinity": "Derby<br/>DE21 5<br/>United Kingdom",
+            "highlightedVicinity": "Derby<br/>DE21 5<br/>United Kingdom",
+            "position": [
+                52.95326,
+                -1.45145
+            ],
+            "category": "administrative-region",
+            "categoryTitle": "Administrative Region",
+            "bbox": [
+                -1.45507,
+                52.95129,
+                -1.44345,
+                52.95874
+            ],
+            "href": "https://places.ls.hereapi.com/places/v1/places/loc-dmVyc2lvbj0xO3RpdGxlPUJyZWFkc2FsbDtsYW5nPWVuO2xhdD01Mi45NTMyNjtsb249LTEuNDUxNDU7Y2l0eT1EZXJieTtwb3N0YWxDb2RlPURFMjErNTtjb3VudHJ5PUdCUjtkaXN0cmljdD1CcmVhZHNhbGw7c3RhdGU9RW5nbGFuZDtjb3VudHk9RGVyYnlzaGlyZTtjYXRlZ29yeUlkPWFkbWluaXN0cmF0aXZlLXJlZ2lvbjtzb3VyY2VTeXN0ZW09aW50ZXJuYWw7cGRzQ2F0ZWdvcnlJZD05MDAtOTQwMC0wMzk5;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmYmJveD0tMS40NTUwNyUyQzUyLjk1MTI5JTJDLTEuNDQzNDUlMkM1Mi45NTg3NCZyYW5rPTEz?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "address",
+            "id": "loc-dmVyc2lvbj0xO3RpdGxlPUJyZWFkc2FsbDtsYW5nPWVuO2xhdD01Mi45NTMyNjtsb249LTEuNDUxNDU7Y2l0eT1EZXJieTtwb3N0YWxDb2RlPURFMjErNTtjb3VudHJ5PUdCUjtkaXN0cmljdD1CcmVhZHNhbGw7c3RhdGU9RW5nbGFuZDtjb3VudHk9RGVyYnlzaGlyZTtjYXRlZ29yeUlkPWFkbWluaXN0cmF0aXZlLXJlZ2lvbjtzb3VyY2VTeXN0ZW09aW50ZXJuYWw7cGRzQ2F0ZWdvcnlJZD05MDAtOTQwMC0wMzk5",
+            "distance": 2632955
+        },
+        {
+            "title": "Breadalbane",
+            "highlightedTitle": "<b>Bread</b>albane",
+            "vicinity": "Tasmania<br/>Australia",
+            "highlightedVicinity": "Tasmania<br/>Australia",
+            "position": [
+                -41.52613,
+                147.18739
+            ],
+            "category": "city-town-village",
+            "categoryTitle": "City, Town or Village",
+            "bbox": [
+                147.13636,
+                -41.5397,
+                147.21187,
+                -41.49478
+            ],
+            "href": "https://places.ls.hereapi.com/places/v1/places/loc-dmVyc2lvbj0xO3RpdGxlPUJyZWFkYWxiYW5lO2xhbmc9ZW47bGF0PS00MS41MjYxMztsb249MTQ3LjE4NzM5O2NpdHk9QnJlYWRhbGJhbmU7cG9zdGFsQ29kZT03MjU4O2NvdW50cnk9QVVTO3N0YXRlPVRhc21hbmlhO3N0YXRlQ29kZT1UQVM7Y2F0ZWdvcnlJZD1jaXR5LXRvd24tdmlsbGFnZTtzb3VyY2VTeXN0ZW09aW50ZXJuYWw7cGRzQ2F0ZWdvcnlJZD05MDAtOTEwMC0wMDAw;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmYmJveD0xNDcuMTM2MzYlMkMtNDEuNTM5NyUyQzE0Ny4yMTE4NyUyQy00MS40OTQ3OCZyYW5rPTE0?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "address",
+            "id": "loc-dmVyc2lvbj0xO3RpdGxlPUJyZWFkYWxiYW5lO2xhbmc9ZW47bGF0PS00MS41MjYxMztsb249MTQ3LjE4NzM5O2NpdHk9QnJlYWRhbGJhbmU7cG9zdGFsQ29kZT03MjU4O2NvdW50cnk9QVVTO3N0YXRlPVRhc21hbmlhO3N0YXRlQ29kZT1UQVM7Y2F0ZWdvcnlJZD1jaXR5LXRvd24tdmlsbGFnZTtzb3VyY2VTeXN0ZW09aW50ZXJuYWw7cGRzQ2F0ZWdvcnlJZD05MDAtOTEwMC0wMDAw",
+            "distance": 14965607
+        },
+        {
+            "title": "Long Bread",
+            "highlightedTitle": "Long <b>Bread</b>",
+            "vicinity": "Kuyumcu İrfan Sokak<br/>34371 Halaskargazi, Şişli",
+            "highlightedVicinity": "Kuyumcu İrfan Sokak<br/>34371 Halaskargazi, Şişli",
+            "position": [
+                41.05184,
+                28.98932
+            ],
+            "category": "snacks-fast-food",
+            "categoryTitle": "Snacks/Fast food",
+            "href": "https://places.ls.hereapi.com/places/v1/places/792sxk9e-fccdfbdc0e1e47408b73de4c7bb2ad7f;context=Zmxvdy1pZD1hMmFmN2ZiMy04MGYzLTVhM2YtODE4ZS0xZGU1NDA1NzVjY2VfMTY1ODExOTYzNjc5M183ODM5XzU4MzcmcmFuaz0xNQ?app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:place",
+            "resultType": "place",
+            "id": "792sxk9e-fccdfbdc0e1e47408b73de4c7bb2ad7f",
+            "distance": 7873
+        },
+        {
+            "title": "Breadtaking",
+            "highlightedTitle": "<b>Bread</b>taking",
+            "completion": "breadtaking",
+            "href": "https://places.ls.hereapi.com/places/v1/autosuggest;context=cmVzdWx0X3R5cGVzPXF1ZXJ5JTJDYWRkcmVzcyUyQ2NhdGVnb3J5JTJDcGxhY2UlMkNjaGFpbiZmbG93LWlkPWEyYWY3ZmIzLTgwZjMtNWEzZi04MThlLTFkZTU0MDU3NWNjZV8xNjU4MTE5NjM2NzkzXzc4MzlfNTgzNyZyYW5rPTE2?q=Breadtaking&at=41.03436065811265%2C28.898568817169046&app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:autosuggest",
+            "resultType": "query"
+        },
+        {
+            "title": "Breadalbane",
+            "highlightedTitle": "<b>Bread</b>albane",
+            "completion": "breadalbane",
+            "href": "https://places.ls.hereapi.com/places/v1/autosuggest;context=cmVzdWx0X3R5cGVzPXF1ZXJ5JTJDYWRkcmVzcyUyQ2NhdGVnb3J5JTJDcGxhY2UlMkNjaGFpbiZmbG93LWlkPWEyYWY3ZmIzLTgwZjMtNWEzZi04MThlLTFkZTU0MDU3NWNjZV8xNjU4MTE5NjM2NzkzXzc4MzlfNTgzNyZyYW5rPTE3?q=Breadalbane&at=41.03436065811265%2C28.898568817169046&app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:autosuggest",
+            "resultType": "query"
+        },
+        {
+            "title": "Breads",
+            "highlightedTitle": "<b>Bread</b>s",
+            "completion": "breads",
+            "href": "https://places.ls.hereapi.com/places/v1/autosuggest;context=cmVzdWx0X3R5cGVzPXF1ZXJ5JTJDYWRkcmVzcyUyQ2NhdGVnb3J5JTJDcGxhY2UlMkNjaGFpbiZmbG93LWlkPWEyYWY3ZmIzLTgwZjMtNWEzZi04MThlLTFkZTU0MDU3NWNjZV8xNjU4MTE5NjM2NzkzXzc4MzlfNTgzNyZyYW5rPTE4?q=Breads&at=41.03436065811265%2C28.898568817169046&app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:autosuggest",
+            "resultType": "query"
+        },
+        {
+            "title": "Breads",
+            "highlightedTitle": "<b>Bread</b>s",
+            "completion": "breads, ",
+            "href": "https://places.ls.hereapi.com/places/v1/autosuggest;context=cmVzdWx0X3R5cGVzPXF1ZXJ5JTJDYWRkcmVzcyUyQ2NhdGVnb3J5JTJDcGxhY2UlMkNjaGFpbiZmbG93LWlkPWEyYWY3ZmIzLTgwZjMtNWEzZi04MThlLTFkZTU0MDU3NWNjZV8xNjU4MTE5NjM2NzkzXzc4MzlfNTgzNyZyYW5rPTE5?q=Breads&at=41.03436065811265%2C28.898568817169046&app_id=vKZ77zQ8tIEcfVlJYReF&app_code=L-eD_mpVZXrl3Tlsa7R3jw",
+            "type": "urn:nlp-types:autosuggest",
+            "resultType": "query"
+        }
+    ]
+}

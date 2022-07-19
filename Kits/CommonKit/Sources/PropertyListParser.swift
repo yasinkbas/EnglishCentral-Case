@@ -8,22 +8,22 @@
 
 import Foundation
 
-final class PropertyListHandler {
-    enum PropertyListError: Error {
+public class PropertyListParser {
+    enum PropertyListParserError: Error {
         case pathNotFound
-        case decodeError
+        case decoderError
     }
     
-    func read<T: Decodable>(fileName: String) throws -> T {
+    public static func read<T: Decodable>(fileName: String) throws -> T {
         guard let url = Bundle.main.url(forResource: fileName, withExtension: "plist") else {
-            throw PropertyListError.pathNotFound
+            throw PropertyListParserError.pathNotFound
         }
         do {
             let data = try Data(contentsOf: url)
             let result = try PropertyListDecoder().decode(T.self, from: data)
             return result
         } catch {
-            throw PropertyListError.decodeError
+            throw PropertyListParserError.decoderError
         }
     }
 }

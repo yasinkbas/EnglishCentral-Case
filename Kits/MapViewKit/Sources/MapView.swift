@@ -12,7 +12,7 @@ import UILab
 import CommonKit
 import CoreViewKit
 
-public protocol MapViewViewInterface: AlertShowable {
+public protocol MapViewInterface: AlertShowable {
     func prepareUI()
     func centerUserLocation(region: MKCoordinateRegion)
     func addAnnotation(_ annotation: MKPointAnnotation)
@@ -36,8 +36,8 @@ public class MapView: UIView {
     }()
 }
 
-// MARK: - MapViewViewInterface
-extension MapView: MapViewViewInterface {
+// MARK: - MapViewInterface
+extension MapView: MapViewInterface {
     public func prepareUI() {
         coreMapView.embed(in: self)
     }
@@ -47,15 +47,11 @@ extension MapView: MapViewViewInterface {
     }
     
     public func addAnnotation(_ annotation: MKPointAnnotation) {
-        DispatchQueue.main.async {
-            self.coreMapView.addAnnotation(annotation)
-        }
+        coreMapView.addAnnotation(annotation)
     }
     
     public func removeAllAnnotations() {
-        DispatchQueue.main.async {
-            self.coreMapView.removeAnnotations(self.coreMapView.annotations)
-        }
+        coreMapView.removeAnnotations(coreMapView.annotations)
     }
     
     public func fitAnnotations() {

@@ -10,6 +10,7 @@ import UIKit
 import UILab
 import NetworkKit
 import NLab
+import CommonKit
 
 final class AppContainer {
     let router: AppRouter
@@ -29,7 +30,7 @@ final class AppContainer {
         struct Response: Decodable {
             let placesApiKey: String
         }
-        let response: Response = try! PropertyListHandler().read(fileName: "APIKeys")
+        let response: Response = try! PropertyListParser.read(fileName: "APIKeys")
         NetworkConfigs.register(placesApiKey: response.placesApiKey)
     }
     
@@ -38,8 +39,6 @@ final class AppContainer {
     }
     
     private func forceToDarkMode() {
-        if #available(iOS 13.0, *) {
-            window?.overrideUserInterfaceStyle = .dark
-        }
+        window?.overrideUserInterfaceStyle = .dark
     }
 }

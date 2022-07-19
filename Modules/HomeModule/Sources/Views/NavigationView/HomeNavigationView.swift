@@ -13,12 +13,6 @@ protocol HomeNavigationViewInterface: AnyObject {
     func prepareUI()
 }
 
-extension HomeNavigationView {
-    enum Constants {
-        
-    }
-}
-
 final class HomeNavigationView: UIView {
     var presenter: HomeNavigationViewPresenterInterface! {
         didSet {
@@ -58,7 +52,7 @@ final class HomeNavigationView: UIView {
     }
 }
 
-// MARK: - HomeNavigationViewViewInterface
+// MARK: - HomeNavigationViewInterface
 extension HomeNavigationView: HomeNavigationViewInterface {
     func prepareUI() {
         backgroundColor = .clear
@@ -69,7 +63,6 @@ extension HomeNavigationView: HomeNavigationViewInterface {
         
         addSubview(searchButton)
         searchButton.set(.leading(searchBarContainerView.trailing, 20), .trailingOf(self), .heightOf(searchBarContainerView))
-        
     }
 }
 
