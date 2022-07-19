@@ -1,5 +1,5 @@
 //
-//  Array+Extensions.swift
+//  Sequence+Extensions.swift
 //  CommonKit
 //
 //  Created by Yasin Akbas on 17.07.2022.

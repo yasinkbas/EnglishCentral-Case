@@ -23,9 +23,9 @@ final class MockHomeViewController: HomeViewInterface {
 
     var invokedPrepareNavigationView = false
     var invokedPrepareNavigationViewCount = 0
-    var stubbedPrepareNavigationViewResult: HomeNavigationViewPresenter!
+    var stubbedPrepareNavigationViewResult: HomeNavigationViewPresenterInterface!
 
-    func prepareNavigationView() -> HomeNavigationViewPresenter {
+    func prepareNavigationView() -> HomeNavigationViewPresenterInterface {
         invokedPrepareNavigationView = true
         invokedPrepareNavigationViewCount += 1
         return stubbedPrepareNavigationViewResult

@@ -33,6 +33,9 @@ let project = Project(
             sources: [
                 "UnitTests/**"
             ],
+            resources: [
+                "UnitTests/**"
+            ],
             dependencies: [
 
             ])

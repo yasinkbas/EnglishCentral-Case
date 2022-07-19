@@ -12,7 +12,6 @@ public protocol MapViewPresenterInterface: AnyObject {
     var currentLocation: CLLocationCoordinate2D? { get }
     
     func load()
-    func getDistance(latitude: Double, longitude: Double) async throws -> Int
 }
 
 public class MapViewPresenter {
@@ -42,10 +41,6 @@ extension MapViewPresenter: MapViewPresenterInterface {
         view?.prepareUI()
         locationManager.configure(with: self)
         locationManager.start()
-    }
-    
-    public func getDistance(latitude: Double, longitude: Double) async throws -> Int {
-        try await locationManager.getDistance(latitude: latitude, longitude: longitude)
     }
 }
 

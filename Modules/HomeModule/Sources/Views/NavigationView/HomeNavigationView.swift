@@ -63,7 +63,6 @@ extension HomeNavigationView: HomeNavigationViewInterface {
         
         addSubview(searchButton)
         searchButton.set(.leading(searchBarContainerView.trailing, 20), .trailingOf(self), .heightOf(searchBarContainerView))
-        
     }
 }
 

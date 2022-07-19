@@ -30,13 +30,15 @@ extension HomePresenter {
 typealias Place = AutoSuggestResponse
 
 @MainActor
-final class HomePresenter: NSObject {   
+final class HomePresenter {
     private weak var view: HomeViewInterface?
     private let router: HomeRouterInterface
     private let interactor: HomeInteractorInterface
-    private var distanceOfPlaces: [Place: Int] = [:]
+    
     private var mapModule: MapViewPresenterInterface?
     private var homeNavigationModule: HomeNavigationViewPresenterInterface?
+    
+    private(set) var nearestPlaces: [Place] = []
     
     init(
         view: HomeViewInterface,
@@ -58,47 +60,18 @@ final class HomePresenter: NSObject {
         view?.addAnnotation(annotation)
     }
     
-    func showNearestPlaces(with places: [Place], threshold: Int) async {
-        do {
-            distanceOfPlaces = try await sortPlacesByDistance(places: places)
-        } catch {
-            guard let message = (error as? LocationManager.LocationManagerError)?.description else { return }
-            view?.showAlert(message: message)
-        }
-        
-        let nearestPlaces = Array(distanceOfPlaces.keys).sorted(by: { distanceOfPlaces[$0]! < distanceOfPlaces[$1]! })
-        let placesCountThreshold = nearestPlaces.count > threshold
-        ? threshold
-        : nearestPlaces.count
-        Array((nearestPlaces.prefix(placesCountThreshold))).forEach { place in
-            addAnnotation(for: place)
-        }
-    }
-    
-    func sortPlacesByDistance(places: [Place]) async throws -> [Place: Int] {
-        try await withThrowingTaskGroup(of: (place: Place, distance: Int).self,
-                                        returning: [Place: Int].self, body: { taskGroup in
-            for place in places {
-                guard let latitude = place.position?[safe: Constant.latitudeIndexPosition],
-                      let longitude = place.position?[safe: Constant.longitudeIndexPosition],
-                      let mapModule else { continue }
-                taskGroup.addTask {
-                    let distance = try await mapModule.getDistance(latitude: latitude, longitude: longitude)
-                    return (place, distance)
-                }
-            }
-            
-            var result = [Place : Int]()
-            for try await taskResult in taskGroup {
-                result[taskResult.place] = taskResult.distance
-            }
-            return result
-        })
+    func showNearestPlaces(with places: [Place], threshold: Int) {
+        nearestPlaces = Array(places
+            .filter { $0.distance != nil }
+            .sorted(by: { $0.distance! < $1.distance! })
+            .prefix(threshold)
+        )
+        nearestPlaces.forEach { addAnnotation(for: $0) }
     }
     
     func fetchAutoSuggests(at: String, q: String) async {
         guard let places = await interactor.fetchAutoSuggests(at: at, q: q)?.results else { return }
-        await showNearestPlaces(with: places, threshold: Constant.suggestedPlacesCountThreshold)
+        showNearestPlaces(with: places, threshold: Constant.suggestedPlacesCountThreshold)
         view?.hideLoading()
         view?.fitMapAnnotations()
     }
@@ -118,7 +91,7 @@ extension HomePresenter: HomePresenterInterface {
 // MARK: - HomeNavigationViewPresenterDelegate
 extension HomePresenter: HomeNavigationViewPresenterDelegate {
     func searchButtonTapped(searchText: String) {
-        distanceOfPlaces.removeAll(keepingCapacity: true)
+        nearestPlaces.removeAll(keepingCapacity: true)
         view?.removeAllAnnotations()
         view?.hideKeyboard()
         view?.showLoading()

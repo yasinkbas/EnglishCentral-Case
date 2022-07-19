@@ -15,7 +15,7 @@ import MapKit
 
 protocol HomeViewInterface: LoadingShowable, AlertShowable {
     func prepareUI()
-    func prepareNavigationView() -> HomeNavigationViewPresenter
+    func prepareNavigationView() -> HomeNavigationViewPresenterInterface
     func prepareMapView() -> MapViewPresenterInterface
     func addAnnotation(_ annotation: MKPointAnnotation)
     func removeAllAnnotations()
@@ -58,7 +58,7 @@ extension HomeViewController: HomeViewInterface {
         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
     }
     
-    func prepareNavigationView() -> HomeNavigationViewPresenter {
+    func prepareNavigationView() -> HomeNavigationViewPresenterInterface {
         navigationView = HomeNavigationView()
         let presenter = HomeNavigationViewPresenter(view: navigationView,
                                                     delegate: presenter.navigationViewDelegate)
