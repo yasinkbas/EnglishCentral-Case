@@ -12,12 +12,13 @@ public protocol MapViewPresenterInterface: AnyObject {
     var currentLocation: CLLocationCoordinate2D? { get }
     
     func load()
+    func centerUserCurrentLocation()
 }
 
 extension MapViewPresenter {
     enum Constant {
-        static let latitudinalMeters: Double = 1000
-        static let longitudinalMeters: Double = 1000
+        static let latitudinalMeters: Double = 2000
+        static let longitudinalMeters: Double = 2000
     }
 }
 
@@ -31,14 +32,6 @@ public class MapViewPresenter {
         self.view = view
         self.locationManager = locationManager
     }
-    
-    private func centerUserCurrentLocation() {
-        guard let userCurrentLocation else { return }
-        let region = MKCoordinateRegion(center: userCurrentLocation,
-                                        latitudinalMeters: Constant.latitudinalMeters,
-                                        longitudinalMeters: Constant.longitudinalMeters)
-        view?.centerUserLocation(region: region)
-    }
 }
 
 // MARK: - MapViewPresenterInterface
@@ -49,6 +42,14 @@ extension MapViewPresenter: MapViewPresenterInterface {
         view?.prepareUI()
         locationManager.configure(with: self)
         locationManager.start()
+    }
+    
+    public func centerUserCurrentLocation() {
+        guard let userCurrentLocation else { return }
+        let region = MKCoordinateRegion(center: userCurrentLocation,
+                                        latitudinalMeters: Constant.latitudinalMeters,
+                                        longitudinalMeters: Constant.longitudinalMeters)
+        view?.centerUserLocation(region: region)
     }
 }
 

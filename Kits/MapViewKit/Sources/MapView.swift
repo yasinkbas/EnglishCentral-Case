@@ -27,7 +27,7 @@ public class MapView: UIView {
         }
     }
     
-    lazy var coreMapView: MKMapView = {
+    private lazy var coreMapView: MKMapView = {
         let mapView = MKMapView()
         mapView.delegate = self
         mapView.showsUserLocation = true

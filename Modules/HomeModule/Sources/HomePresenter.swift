@@ -17,6 +17,7 @@ protocol HomePresenterInterface: AnyObject {
     var navigationViewDelegate: HomeNavigationViewPresenterDelegate { get }
     
     func viewDidLoad()
+    func showMyLocationButtonTapped()
 }
 
 extension HomePresenter {
@@ -97,6 +98,10 @@ extension HomePresenter: HomePresenterInterface {
         mapModule = view?.prepareMapView()
         homeNavigationModule = view?.prepareNavigationView()
         view?.prepareUI()
+    }
+    
+    func showMyLocationButtonTapped() {
+        mapModule?.centerUserCurrentLocation()
     }
 }
 

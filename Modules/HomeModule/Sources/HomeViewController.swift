@@ -26,6 +26,9 @@ protocol HomeViewInterface: LoadingShowable, AlertShowable {
 private extension HomeViewController {
     struct Constant {
         static let backgroundColor: UIColor = #colorLiteral(red: 0.1726958752, green: 0.1748272181, blue: 0.1423502862, alpha: 1)
+        
+        static let myLocationIcon = UIImage(systemName: "location.fill")?.withTintColor(.white)
+        static let myLocationIconCornerRadius: CGFloat = 16
     }
 }
 
@@ -35,9 +38,24 @@ public class HomeViewController: UIViewController {
     var mapView: MapView!
     var navigationView: HomeNavigationView!
     
+    lazy var showMyLocationButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Constant.myLocationIcon, for: .normal)
+        button.layer.cornerRadius = Constant.myLocationIconCornerRadius
+        button.backgroundColor = Constant.backgroundColor
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(showMyLocationButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+    }
+    
+    @objc
+    private func showMyLocationButtonTapped() {
+        presenter.showMyLocationButtonTapped()
     }
 }
 
@@ -50,9 +68,11 @@ extension HomeViewController: HomeViewInterface {
         view.addSubview(mapView)
         mapView.set(.leadingOf(view), .topOf(view), .trailingOf(view), .bottomOf(view))
         
-        // TODO: move ints inside constant
         view.addSubview(navigationView)
         navigationView.set(.leadingOf(view, 15), .top(view.safeAreaLayoutGuide.topAnchor, 15), .trailingOf(view, 15), .height(50))
+        
+        view.addSubview(showMyLocationButton)
+        showMyLocationButton.set(.trailingOf(view, 15), .bottom(view.safeAreaLayoutGuide.bottomAnchor, 15), .width(40), .height(40))
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
     }
