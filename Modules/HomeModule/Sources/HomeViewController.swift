@@ -23,11 +23,9 @@ protocol HomeViewInterface: LoadingShowable, AlertShowable {
     func hideKeyboard()
 }
 
-extension HomeViewController {
-    struct Constants {
-        static let barColor: UIColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        static let barButtonColor: UIColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        static let topViewHeight: CGFloat = 55
+private extension HomeViewController {
+    struct Constant {
+        static let backgroundColor: UIColor = #colorLiteral(red: 0.1726958752, green: 0.1748272181, blue: 0.1423502862, alpha: 1)
     }
 }
 
@@ -47,11 +45,12 @@ public class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewInterface {
     func prepareUI() {
         navigationController?.setNavigationBarHidden(true, animated: false)
-        view.backgroundColor = #colorLiteral(red: 0.1726958752, green: 0.1748272181, blue: 0.1423502862, alpha: 1)
+        view.backgroundColor = Constant.backgroundColor
         
         view.addSubview(mapView)
         mapView.set(.leadingOf(view), .topOf(view), .trailingOf(view), .bottomOf(view))
         
+        // TODO: move ints inside constant
         view.addSubview(navigationView)
         navigationView.set(.leadingOf(view, 15), .top(view.safeAreaLayoutGuide.topAnchor, 15), .trailingOf(view, 15), .height(50))
         

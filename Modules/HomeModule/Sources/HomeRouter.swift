@@ -21,6 +21,7 @@ final class HomeRouter {
         self.navigationController = navigationController
     }
     
+    @MainActor
     static func createModule(using navigationController: UINavigationController?) -> HomeViewController {
         let view = HomeViewController()
         let interactor = HomeInteractor()

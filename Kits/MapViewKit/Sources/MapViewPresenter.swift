@@ -27,10 +27,7 @@ public class MapViewPresenter {
     private var isFirstLoad: Bool = true
     private var userCurrentLocation: CLLocationCoordinate2D?
 
-    public init(
-        view: MapViewInterface,
-        locationManager: LocationManagerInterface = LocationManager()
-    ) {
+    public init(view: MapViewInterface, locationManager: LocationManagerInterface = LocationManager()) {
         self.view = view
         self.locationManager = locationManager
     }

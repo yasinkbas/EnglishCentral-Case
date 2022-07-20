@@ -50,12 +50,21 @@ final class HomePresenter {
         self.interactor = interactor
     }
     
+    func convertDistanceToKilometers(distance: Int) -> String {
+        guard distance >= 1000 else { return "\(distance)m away"}
+        return String(format:"%.1f", Float(distance) / 1000) + "km away"
+    }
+    
     func addAnnotation(for place: Place) {
         guard let latitude = place.position?[safe: Constant.latitudeIndexPosition],
-              let longitude = place.position?[safe: Constant.longitudeIndexPosition] else { return }
+              let longitude = place.position?[safe: Constant.longitudeIndexPosition],
+              let title = place.title,
+              let categoryTitle = place.categoryTitle,
+              let distance = place.distance else { return }
+        let convertedDistance = convertDistanceToKilometers(distance: distance)
         let annotation = MKPointAnnotation()
-        annotation.title = place.title
-        annotation.subtitle = place.categoryTitle
+        annotation.title = title
+        annotation.subtitle = "\(categoryTitle)\n\(convertedDistance)"
         annotation.coordinate = .init(latitude: latitude, longitude: longitude)
         view?.addAnnotation(annotation)
     }
@@ -70,7 +79,10 @@ final class HomePresenter {
     }
     
     func fetchAutoSuggests(at: String, q: String) async {
-        guard let places = await interactor.fetchAutoSuggests(at: at, q: q)?.results else { return }
+        guard let places = await interactor.fetchAutoSuggests(at: at, q: q)?.results else {
+            view?.hideLoading()
+            return
+        }
         showNearestPlaces(with: places, threshold: Constant.suggestedPlacesCountThreshold)
         view?.hideLoading()
         view?.fitMapAnnotations()
