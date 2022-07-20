@@ -54,7 +54,7 @@ final class HomePresenterTests: XCTestCase {
         
         XCTAssertTrue(view.invokedAddAnnotation)
         XCTAssertEqual(view.invokedAddAnnotationParameters?.annotation.title, "Dardenia (Dardenia Fish & Bread)")
-        XCTAssertEqual(view.invokedAddAnnotationParameters?.annotation.subtitle, "Restaurant")
+        XCTAssertEqual(view.invokedAddAnnotationParameters?.annotation.subtitle, "Restaurant\n19.1km away")
         XCTAssertEqual(view.invokedAddAnnotationParameters?.annotation.coordinate.latitude, 41.02703)
         XCTAssertEqual(view.invokedAddAnnotationParameters?.annotation.coordinate.longitude, 29.1256)
     }
@@ -69,7 +69,7 @@ final class HomePresenterTests: XCTestCase {
         XCTAssertTrue(view.invokedAddAnnotation)
         XCTAssertEqual(view.invokedAddAnnotationCount, 10)
         XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.title, "Mybread")
-        XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.subtitle, "Restaurant")
+        XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.subtitle, "Restaurant\n2.7km away")
         XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.coordinate.latitude, 41.01113)
         XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.coordinate.longitude, 28.90758)
     }
@@ -84,7 +84,7 @@ final class HomePresenterTests: XCTestCase {
         XCTAssertTrue(view.invokedAddAnnotation)
         XCTAssertEqual(view.invokedAddAnnotationCount, 14)
         XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.title, "Mybread")
-        XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.subtitle, "Restaurant")
+        XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.subtitle, "Restaurant\n2.7km away")
         XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.coordinate.latitude, 41.01113)
         XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.coordinate.longitude, 28.90758)
     }
@@ -97,10 +97,10 @@ final class HomePresenterTests: XCTestCase {
         XCTAssertTrue(interactor.invokedFetchAutoSuggests)
         XCTAssertEqual(interactor.invokedFetchAutoSuggestsParameters?.at, "1,2")
         XCTAssertEqual(interactor.invokedFetchAutoSuggestsParameters?.q, "Bread")
+        XCTAssertTrue(view.invokedHideLoading)
         
         XCTAssertEqual(presenter.nearestPlaces.count, 0)
         XCTAssertFalse(view.invokedAddAnnotation)
-        XCTAssertFalse(view.invokedHideLoading)
         XCTAssertFalse(view.invokedFitMapAnnotations)
     }
     
@@ -120,7 +120,7 @@ final class HomePresenterTests: XCTestCase {
         XCTAssertTrue(view.invokedAddAnnotation)
         XCTAssertEqual(view.invokedAddAnnotationCount, 10)
         XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.title, "Mybread")
-        XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.subtitle, "Restaurant")
+        XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.subtitle, "Restaurant\n2.7km away")
         XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.coordinate.latitude, 41.01113)
         XCTAssertEqual(view.invokedAddAnnotationParametersList.first?.annotation.coordinate.longitude, 28.90758)
         

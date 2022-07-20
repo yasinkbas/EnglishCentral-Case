@@ -37,6 +37,6 @@ let project = Project(
                 "UnitTests/**"
             ],
             dependencies: [
-
+                .target(name: "HomeModule")
             ])
     ])
