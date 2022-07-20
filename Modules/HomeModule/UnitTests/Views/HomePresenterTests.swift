@@ -25,6 +25,18 @@ final class HomePresenterTests: XCTestCase {
         presenter = .init(view: view, router: router, interactor: interactor)
     }
     
+    func test_convertDistanceToKilometers_DistanceLowerThanThousands_ReturnsCorrectValueAsMeters() {
+        let value = presenter.convertDistanceToKilometers(distance: 501)
+        
+        XCTAssertEqual(value, "501m away")
+    }
+    
+    func test_convertDistanceToKilometers_DistanceHigherThanThousands_ReturnsCorrectValueAsKilometers() {
+        let value = presenter.convertDistanceToKilometers(distance: 1200)
+        
+        XCTAssertEqual(value, "1.2km away")
+    }
+    
     func test_addAnnotation_LatitudeAndLongitudeAreNotExist_DoesNotAddAnnotation() {
         presenter.addAnnotation(for: emptyAutoSuggestResponse)
         
