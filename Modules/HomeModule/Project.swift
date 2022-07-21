@@ -9,6 +9,7 @@ let project = Project(
             platform: .iOS,
             product: .framework,
             bundleId: "com.yasinkbas.HomeModule",
+            deploymentTarget: .iOS(targetVersion: "16.0", devices: [.iphone]),
             infoPlist: .default,
             sources: [
                 "Sources/**/*.swift",
@@ -30,6 +31,7 @@ let project = Project(
             platform: .iOS,
             product: .unitTests,
             bundleId: "com.yasinkbas.HomeModuleTests",
+            deploymentTarget: .iOS(targetVersion: "16.0", devices: [.iphone]),
             infoPlist: .default,
             sources: [
                 "UnitTests/**"

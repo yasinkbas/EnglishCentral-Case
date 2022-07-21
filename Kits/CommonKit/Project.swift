@@ -9,6 +9,7 @@ let project = Project(
             platform: .iOS,
             product: .framework,
             bundleId: "com.yasinkbas.CommonKit",
+            deploymentTarget: .iOS(targetVersion: "16.0", devices: [.iphone]),
             infoPlist: .default,
             sources: [
                 "Sources/**/*.swift",

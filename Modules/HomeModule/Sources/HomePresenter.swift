@@ -182,6 +182,12 @@ extension HomePresenter: HomeNavigationViewPresenterDelegate {
         }
     }
     
+    func searchBar(textDidChange searchText: String) {
+        if searchText == "" {
+            view?.showHistoryView()
+        }
+    }
+    
     func searchBarShouldBeginEditing() {
         showSearchHistory()
     }

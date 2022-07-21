@@ -30,4 +30,16 @@ final class MockHomeNavigationViewPresenterDelegate: HomeNavigationViewPresenter
         invokedSearchBarShouldBeginEditing = true
         invokedSearchBarShouldBeginEditingCount += 1
     }
+
+    var invokedSearchBar = false
+    var invokedSearchBarCount = 0
+    var invokedSearchBarParameters: (searchText: String, Void)?
+    var invokedSearchBarParametersList = [(searchText: String, Void)]()
+
+    func searchBar(textDidChange searchText: String) {
+        invokedSearchBar = true
+        invokedSearchBarCount += 1
+        invokedSearchBarParameters = (searchText, ())
+        invokedSearchBarParametersList.append((searchText, ()))
+    }
 }
