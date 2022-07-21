@@ -7,10 +7,11 @@
 //
 
 import UIKit
-import UILab
 import NetworkKit
-import NLab
+import PersistentManagerKit
 import CommonKit
+import UILab
+import NLab
 
 final class AppContainer {
     let router: AppRouter
@@ -19,14 +20,14 @@ final class AppContainer {
     init(window: UIWindow?) {
         self.window = window
         router = AppRouter(window: window)
-        configureService()
+        configureNetworkService()
         configureUILab()
         forceToDarkMode()
         
         DependencyHandler().registerDependencies()
     }
     
-    private func configureService() {
+    private func configureNetworkService() {
         struct Response: Decodable {
             let placesApiKey: String
         }

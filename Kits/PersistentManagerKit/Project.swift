@@ -12,10 +12,12 @@ let project = Project(
             infoPlist: .default,
             sources: [
                 "Sources/**/*.swift",
-                "Sources/**/*.m",
-                "Sources/**/*." // TODO: coredata model file
+                "Sources/**/*.m"
             ],
-        dependencies: [
-            .project(target: "CommonKit", path: .relativeToManifest("../../Kits/CommonKit"))
-        ])
+            dependencies: [
+                .project(target: "CommonKit", path: .relativeToManifest("../../Kits/CommonKit"))
+            ],
+            coreDataModels: [
+                CoreDataModel("Sources/Map.xcdatamodeld")
+            ])
     ])

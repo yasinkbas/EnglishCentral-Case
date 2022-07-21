@@ -11,6 +11,7 @@ import CommonKit
 
 protocol HomeNavigationViewInterface: AnyObject {
     func prepareUI()
+    func setSearchBarText(_ text: String)
 }
 
 final class HomeNavigationView: UIView {
@@ -64,6 +65,10 @@ extension HomeNavigationView: HomeNavigationViewInterface {
         addSubview(searchButton)
         searchButton.set(.leading(searchBarContainerView.trailing, 20), .trailingOf(self), .heightOf(searchBarContainerView))
     }
+    
+    func setSearchBarText(_ text: String) {
+        searchBar.text = text
+    }
 }
 
 // MARK: - UISearchBarDelegate
@@ -74,5 +79,10 @@ extension HomeNavigationView: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         presenter.searchButtonTapped()
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        presenter.searchBarShouldBeginEditing()
+        return true
     }
 }

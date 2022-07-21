@@ -152,7 +152,7 @@ final class HomePresenterTests: XCTestCase {
 }
 
 extension HomePresenterTests {
-    var bundle: Bundle { .init(for: type(of: self)) }
+    var bundle: Bundle { .init(for: Self.self) }
     
     var autoSuggestAPIResponse: APIResponse<AutoSuggestResponse> {
         JSONParser.decode(

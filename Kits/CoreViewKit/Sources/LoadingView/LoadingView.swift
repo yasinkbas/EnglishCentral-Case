@@ -8,6 +8,7 @@
 
 import UIKit
 import UILab
+import CommonKit
 
 public protocol LoadingViewInterface: AnyObject {
     func prepareUI()
@@ -15,7 +16,7 @@ public protocol LoadingViewInterface: AnyObject {
 
 private extension LoadingView {
     enum Constant {
-        static let backgroundColor: UIColor = #colorLiteral(red: 0.2274622619, green: 0.234510392, blue: 0.1947289109, alpha: 1)
+        static let backgroundColor: UIColor = Colors.dark
         static let cornerRadius: CGFloat = 16
     }
 }
