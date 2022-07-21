@@ -6,14 +6,14 @@ The project uses Places API. To run the project, you need to define your API key
 
 ## Tech Stack
 
-- Xcode Version: 14 beta (unfortunately macOS Ventura does not support Xcode 13.**)
+- Xcode Version: 14 beta (unfortunately, macOS Ventura does not support Xcode 13.**)
 - Minimum iOS Version: iOS 16
 - Third-party Dependencies: UILab, NLab
-- Tuist Version: 1.52.0
--  Moduler Based
+- [Tuist](https://tuist.io) Version: 1.52.0
+- Moduler Based
 - Core Data
--  VIPER
--  Unit Tests
+- VIPER
+- Unit Tests
 
 ### Screenshots
 | 1 | 2 | 3 | 4 |
