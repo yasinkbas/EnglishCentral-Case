@@ -14,6 +14,19 @@ protocol HomeNavigationViewInterface: AnyObject {
     func setSearchBarText(_ text: String)
 }
 
+private extension HomeNavigationView {
+    enum Constant {
+        enum SearchBarContainerView {
+            static let cornerRadius: Double = 16
+        }
+        
+        enum SearchButton {
+            static let cornerRadius: Double = 16
+            static let fontSize: Double = 16
+        }
+    }
+}
+
 final class HomeNavigationView: UIView {
     var presenter: HomeNavigationViewPresenterInterface! {
         didSet {
@@ -33,7 +46,7 @@ final class HomeNavigationView: UIView {
     private lazy var searchBarContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = Colors.darkGray
-        view.layer.cornerRadius = 16
+        view.layer.cornerRadius = Constant.SearchBarContainerView.cornerRadius
         return view
     }()
     
@@ -41,8 +54,8 @@ final class HomeNavigationView: UIView {
         let button = UIButton()
         button.setTitle("Search", for: .normal)
         button.backgroundColor = Colors.darkGray
-        button.layer.cornerRadius = 16
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.layer.cornerRadius = Constant.SearchButton.cornerRadius
+        button.titleLabel?.font = .systemFont(ofSize: Constant.SearchButton.fontSize)
         button.addTarget(self, action: #selector(searchButtonTapped), for: .touchDown)
         return button
     }()

@@ -19,6 +19,8 @@ protocol HomeHistoryViewInterface: AnyObject {
 private extension HomeHistoryView {
     enum Constant {
         static let backgroundColor: UIColor = Colors.darkGray
+        static let cornerRadius: Double = 16
+        static let cellTextFontSize: Double = 18
     }
 }
 
@@ -49,7 +51,7 @@ extension HomeHistoryView: HomeHistoryViewInterface {
         tableView.set(.leadingOf(self), .topOf(self), .trailingOf(self), .bottomOf(self))
         
         clipsToBounds = true
-        layer.cornerRadius = 16
+        layer.cornerRadius = Constant.cornerRadius
         layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
     
@@ -71,7 +73,7 @@ extension HomeHistoryView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = presenter.cellTitleFor(index: indexPath.row)
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
+        cell.textLabel?.font = UIFont.systemFont(ofSize: Constant.cellTextFontSize)
         cell.textLabel?.textAlignment = .center
         cell.backgroundColor = Constant.backgroundColor
         cell.selectionStyle = .none
