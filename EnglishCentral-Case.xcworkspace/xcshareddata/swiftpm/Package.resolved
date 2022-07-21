@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "nlab",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yasinkbas/NLab.git",
+      "state" : {
+        "revision" : "2077ad882aa23971b52b3554a1305d4a714ee522",
+        "version" : "1.1.2"
+      }
+    },
+    {
+      "identity" : "uilab",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yasinkbas/UILab.git",
+      "state" : {
+        "revision" : "c19c59ff0ea281db8b48aca92481d9e466f76390",
+        "version" : "0.3.4"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:EnglishCentral-Case.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:Kits"
+      name = "Kits">
+      <FileRef
+         location = "group:CommonKit/CommonKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:CoreViewKit/CoreViewKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:DependencyManagerKit/DependencyManagerKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:MapViewKit/MapViewKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:NetworkKit/NetworkKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:PersistentManagerKit/PersistentManagerKit.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Modules"
+      name = "Modules">
+      <FileRef
+         location = "group:HomeModule/HomeModule.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
