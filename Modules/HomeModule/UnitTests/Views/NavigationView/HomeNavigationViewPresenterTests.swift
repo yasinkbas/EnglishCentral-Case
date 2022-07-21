@@ -42,4 +42,11 @@ final class HomeNavigationViewPresenterTests: XCTestCase {
         XCTAssertTrue(delegate.invokedSearchButtonTapped)
         XCTAssertEqual(delegate.invokedSearchButtonTappedParameters?.searchText, "Bread")
     }
+    
+    func test_searchBarTextDidChange_InvokesDelegateMethod() {
+        presenter.searchBar(textDidChange: "Bread")
+        
+        XCTAssertTrue(delegate.invokedSearchBar)
+        XCTAssertEqual(delegate.invokedSearchBarParameters?.searchText, "Bread")
+    }
 }

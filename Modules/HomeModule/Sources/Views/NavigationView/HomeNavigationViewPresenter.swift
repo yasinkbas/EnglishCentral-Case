@@ -11,6 +11,7 @@ import Foundation
 protocol HomeNavigationViewPresenterDelegate: AnyObject {
     func searchButtonTapped(searchText: String)
     func searchBarShouldBeginEditing()
+    func searchBar(textDidChange searchText: String)
 }
 
 protocol HomeNavigationViewPresenterInterface: AnyObject {
@@ -49,6 +50,7 @@ extension HomeNavigationViewPresenter: HomeNavigationViewPresenterInterface {
     
     func searchBar(textDidChange searchText: String) {
         self.searchText = searchText
+        delegate?.searchBar(textDidChange: searchText)
     }
     
     func searchBarShouldBeginEditing() {
