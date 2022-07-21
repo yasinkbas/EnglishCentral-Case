@@ -2,7 +2,7 @@
 
 ### Important Note
 
-The project uses Places API. To run the project, you need to define your API key under the APIKeys.plist file.
+The project uses [Places API](https://places.demo.api.here.com/places/). To run the project, you need to define your API key under the APIKeys.plist file.
 
 ## Tech Stack
 
@@ -10,14 +10,14 @@ The project uses Places API. To run the project, you need to define your API key
 - Minimum iOS Version: iOS 16
 - Third-party Dependencies: UILab, NLab
 - [Tuist](https://tuist.io) Version: 1.52.0
-- Moduler Based
+- Modular Architecture
 - Core Data
 - VIPER
 - Unit Tests
 
 ### Screenshots
 | 1 | 2 | 3 | 4 |
-|---|:--|:--|---|
+|---|--|--|---|
 | <img src="assets/screenShot1.png" width="200"> | <img src="assets/screenShot2.png" width="200"> | <img src="assets/screenShot3.png" width="200"> | <img src="assets/screenShot4.png" width="200"> | 
 
 
