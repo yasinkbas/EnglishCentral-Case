@@ -40,7 +40,7 @@ final class HomePresenter {
     private var homeNavigationModule: HomeNavigationViewPresenterInterface?
     private var homeHistoryModule: HomeHistoryPresenterInterface?
     
-    var userCurrentLocation: CLLocationCoordinate2D?
+    private(set) var userCurrentLocation: CLLocationCoordinate2D?
     
     private(set) var nearestPlaces: [Place] = []
     private var searchText: String = ""
@@ -198,7 +198,7 @@ extension HomePresenter: HomeHistoryPresenterDelegate {
         item.annotations?
             .compactMap { $0 as? Annotation }
             .forEach { addAnnotation(for: $0) }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.view?.fitMapAnnotations()
         }
     }
