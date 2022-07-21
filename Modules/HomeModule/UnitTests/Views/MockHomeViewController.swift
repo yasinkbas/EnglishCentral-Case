@@ -23,11 +23,15 @@ final class MockHomeViewController: HomeViewInterface {
 
     var invokedPrepareNavigationView = false
     var invokedPrepareNavigationViewCount = 0
+    var invokedPrepareNavigationViewParameters: (delegate: HomeNavigationViewPresenterDelegate, Void)?
+    var invokedPrepareNavigationViewParametersList = [(delegate: HomeNavigationViewPresenterDelegate, Void)]()
     var stubbedPrepareNavigationViewResult: HomeNavigationViewPresenterInterface!
 
-    func prepareNavigationView() -> HomeNavigationViewPresenterInterface {
+    func prepareNavigationView(delegate: HomeNavigationViewPresenterDelegate) -> HomeNavigationViewPresenterInterface {
         invokedPrepareNavigationView = true
         invokedPrepareNavigationViewCount += 1
+        invokedPrepareNavigationViewParameters = (delegate, ())
+        invokedPrepareNavigationViewParametersList.append((delegate, ()))
         return stubbedPrepareNavigationViewResult
     }
 
@@ -39,6 +43,20 @@ final class MockHomeViewController: HomeViewInterface {
         invokedPrepareMapView = true
         invokedPrepareMapViewCount += 1
         return stubbedPrepareMapViewResult
+    }
+
+    var invokedPrepareHistoryView = false
+    var invokedPrepareHistoryViewCount = 0
+    var invokedPrepareHistoryViewParameters: (delegate: HomeHistoryPresenterDelegate, Void)?
+    var invokedPrepareHistoryViewParametersList = [(delegate: HomeHistoryPresenterDelegate, Void)]()
+    var stubbedPrepareHistoryViewResult: HomeHistoryPresenterInterface!
+
+    func prepareHistoryView(delegate: HomeHistoryPresenterDelegate) -> HomeHistoryPresenterInterface {
+        invokedPrepareHistoryView = true
+        invokedPrepareHistoryViewCount += 1
+        invokedPrepareHistoryViewParameters = (delegate, ())
+        invokedPrepareHistoryViewParametersList.append((delegate, ()))
+        return stubbedPrepareHistoryViewResult
     }
 
     var invokedAddAnnotation = false
@@ -67,6 +85,22 @@ final class MockHomeViewController: HomeViewInterface {
     func fitMapAnnotations() {
         invokedFitMapAnnotations = true
         invokedFitMapAnnotationsCount += 1
+    }
+
+    var invokedShowHistoryView = false
+    var invokedShowHistoryViewCount = 0
+
+    func showHistoryView() {
+        invokedShowHistoryView = true
+        invokedShowHistoryViewCount += 1
+    }
+
+    var invokedHideHistoryView = false
+    var invokedHideHistoryViewCount = 0
+
+    func hideHistoryView() {
+        invokedHideHistoryView = true
+        invokedHideHistoryViewCount += 1
     }
 
     var invokedHideKeyboard = false

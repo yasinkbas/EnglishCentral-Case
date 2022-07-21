@@ -21,6 +21,7 @@ let project = Project(
                 .project(target: "DependencyManagerKit", path: .relativeToManifest("../../Kits/DependencyManagerKit")),
                 .project(target: "NetworkKit", path: .relativeToManifest("../../Kits/NetworkKit")),
                 .project(target: "MapViewKit", path: .relativeToManifest("../../Kits/MapViewKit")),
+                .project(target: "PersistentManagerKit", path: .relativeToManifest("../../Kits/PersistentManagerKit")),
                 .package(product: "NLab"),
                 .package(product: "UILab")
             ]),
@@ -37,6 +38,6 @@ let project = Project(
                 "UnitTests/**"
             ],
             dependencies: [
-
+                .target(name: "HomeModule")
             ])
     ])

@@ -22,4 +22,12 @@ final class MockHomeNavigationViewPresenterDelegate: HomeNavigationViewPresenter
         invokedSearchButtonTappedParameters = (searchText, ())
         invokedSearchButtonTappedParametersList.append((searchText, ()))
     }
+
+    var invokedSearchBarShouldBeginEditing = false
+    var invokedSearchBarShouldBeginEditingCount = 0
+
+    func searchBarShouldBeginEditing() {
+        invokedSearchBarShouldBeginEditing = true
+        invokedSearchBarShouldBeginEditingCount += 1
+    }
 }

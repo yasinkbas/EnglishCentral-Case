@@ -19,6 +19,8 @@ let project = Project(
                 "Sources/**/*.xcassets"
             ],
             dependencies: [
+                .project(target: "CommonKit", path: .relativeToManifest("../../Kits/CommonKit")),
                 .package(product: "UILab")
+                
             ])
     ])

@@ -38,7 +38,6 @@ final class MapViewPresenterTests: XCTestCase {
     }
     
     func test_centerUserCurrentLocation_UserLocationExist_CentersUserLocation() {
-        // setUserLocation
         presenter.locationManager(.init(latitude: 1, longitude: 2), error: nil)
         
         view.invokedCenterUserLocation = false
@@ -51,7 +50,6 @@ final class MapViewPresenterTests: XCTestCase {
         XCTAssertEqual(view.invokedCenterUserLocationParameters?.region.center.latitude, 1)
         XCTAssertEqual(view.invokedCenterUserLocationParameters?.region.span.latitudeDelta, 0.018087334733778156)
         XCTAssertEqual(view.invokedCenterUserLocationParameters?.region.span.longitudeDelta, 0.01796902942957538)
-        
     }
     
     func test_locationManager_ErrorExist_ShowsAlert() {

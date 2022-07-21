@@ -13,15 +13,6 @@ public final class Dependency<Value> {
     private var value: Value?
     private let engine: DependencyEngine
     
-    public init(engine: DependencyEngine = .shared) {
-        self.engine = engine
-    }
-    
-    public convenience init(wrappedValue: Value, engine: DependencyEngine = .shared) {
-        self.init(engine: engine)
-        self.value = wrappedValue
-    }
-    
     public var wrappedValue: Value {
         get {
             if let value {
@@ -35,6 +26,15 @@ public final class Dependency<Value> {
         set {
             value = newValue
         }
+    }
+    
+    public init(engine: DependencyEngine = .shared) {
+        self.engine = engine
+    }
+    
+    public convenience init(wrappedValue: Value, engine: DependencyEngine = .shared) {
+        self.init(engine: engine)
+        self.value = wrappedValue
     }
 }
 

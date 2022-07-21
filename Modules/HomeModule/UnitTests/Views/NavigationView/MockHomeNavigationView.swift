@@ -18,4 +18,16 @@ final class MockHomeNavigationView: HomeNavigationViewInterface {
         invokedPrepareUI = true
         invokedPrepareUICount += 1
     }
+
+    var invokedSetSearchBarText = false
+    var invokedSetSearchBarTextCount = 0
+    var invokedSetSearchBarTextParameters: (text: String, Void)?
+    var invokedSetSearchBarTextParametersList = [(text: String, Void)]()
+
+    func setSearchBarText(_ text: String) {
+        invokedSetSearchBarText = true
+        invokedSetSearchBarTextCount += 1
+        invokedSetSearchBarTextParameters = (text, ())
+        invokedSetSearchBarTextParametersList.append((text, ()))
+    }
 }

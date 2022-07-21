@@ -20,7 +20,8 @@ let dependencies: [TargetDependency] = {
         .project(target: "NetworkKit", path: .relativeToManifest("Kits/NetworkKit")),
         .project(target: "DependencyManagerKit", path: .relativeToManifest("Kits/DependencyManagerKit")),
         .project(target: "MapViewKit", path: .relativeToManifest("Kits/MapViewKit")),
-        .project(target: "CoreViewKit", path: .relativeToManifest("Kits/CoreViewKit"))
+        .project(target: "CoreViewKit", path: .relativeToManifest("Kits/CoreViewKit")),
+        .project(target: "PersistentManagerKit", path: .relativeToManifest("Kits/PersistentManagerKit"))
     ])
     
     // Internal Modules

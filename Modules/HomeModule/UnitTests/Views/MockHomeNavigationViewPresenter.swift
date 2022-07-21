@@ -19,6 +19,18 @@ final class MockHomeNavigationViewPresenter: HomeNavigationViewPresenterInterfac
         invokedLoadCount += 1
     }
 
+    var invokedUpdateSearchBarText = false
+    var invokedUpdateSearchBarTextCount = 0
+    var invokedUpdateSearchBarTextParameters: (text: String, Void)?
+    var invokedUpdateSearchBarTextParametersList = [(text: String, Void)]()
+
+    func updateSearchBarText(_ text: String) {
+        invokedUpdateSearchBarText = true
+        invokedUpdateSearchBarTextCount += 1
+        invokedUpdateSearchBarTextParameters = (text, ())
+        invokedUpdateSearchBarTextParametersList.append((text, ()))
+    }
+
     var invokedSearchButtonTapped = false
     var invokedSearchButtonTappedCount = 0
 
@@ -37,5 +49,13 @@ final class MockHomeNavigationViewPresenter: HomeNavigationViewPresenterInterfac
         invokedSearchBarCount += 1
         invokedSearchBarParameters = (searchText, ())
         invokedSearchBarParametersList.append((searchText, ()))
+    }
+
+    var invokedSearchBarShouldBeginEditing = false
+    var invokedSearchBarShouldBeginEditingCount = 0
+
+    func searchBarShouldBeginEditing() {
+        invokedSearchBarShouldBeginEditing = true
+        invokedSearchBarShouldBeginEditingCount += 1
     }
 }

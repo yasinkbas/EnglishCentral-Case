@@ -29,4 +29,12 @@ final class MockMapViewPresenter: MapViewPresenterInterface {
         invokedLoad = true
         invokedLoadCount += 1
     }
+
+    var invokedCenterUserCurrentLocation = false
+    var invokedCenterUserCurrentLocationCount = 0
+
+    func centerUserCurrentLocation() {
+        invokedCenterUserCurrentLocation = true
+        invokedCenterUserCurrentLocationCount += 1
+    }
 }

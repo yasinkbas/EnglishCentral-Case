@@ -12,14 +12,18 @@ import DependencyManagerKit
 import MapViewKit
 import CoreViewKit
 import MapKit
+import PersistentManagerKit
 
 protocol HomeViewInterface: LoadingShowable, AlertShowable {
     func prepareUI()
-    func prepareNavigationView() -> HomeNavigationViewPresenterInterface
+    func prepareNavigationView(delegate: HomeNavigationViewPresenterDelegate) -> HomeNavigationViewPresenterInterface
     func prepareMapView() -> MapViewPresenterInterface
+    func prepareHistoryView(delegate: HomeHistoryPresenterDelegate) -> HomeHistoryPresenterInterface
     func addAnnotation(_ annotation: MKPointAnnotation)
     func removeAllAnnotations()
     func fitMapAnnotations()
+    func showHistoryView()
+    func hideHistoryView()
     func hideKeyboard()
 }
 
@@ -37,6 +41,7 @@ public class HomeViewController: UIViewController {
     
     var mapView: MapView!
     var navigationView: HomeNavigationView!
+    var historyView: HomeHistoryView!
     
     lazy var showMyLocationButton: UIButton = {
         let button = UIButton()
@@ -57,6 +62,11 @@ public class HomeViewController: UIViewController {
     private func showMyLocationButtonTapped() {
         presenter.showMyLocationButtonTapped()
     }
+    
+    @objc
+    private func emptyViewTapped(_ sender: UITapGestureRecognizer) {
+        presenter.emptyViewTapped()
+    }
 }
 
 // MARK: - HomeViewInterface
@@ -74,13 +84,18 @@ extension HomeViewController: HomeViewInterface {
         view.addSubview(showMyLocationButton)
         showMyLocationButton.set(.trailingOf(view, 15), .bottom(view.safeAreaLayoutGuide.bottomAnchor, 15), .width(40), .height(40))
         
-        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
+        view.addSubview(historyView)
+        historyView.set(.top(navigationView.bottom, -2), .leading(navigationView.leading), .trailing(navigationView.trailing, 90), .height(0))
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(emptyViewTapped(_:)))
+        tapGesture.cancelsTouchesInView = false
+        mapView.addGestureRecognizer(tapGesture)
     }
     
-    func prepareNavigationView() -> HomeNavigationViewPresenterInterface {
+    func prepareNavigationView(delegate: HomeNavigationViewPresenterDelegate) -> HomeNavigationViewPresenterInterface {
         navigationView = HomeNavigationView()
         let presenter = HomeNavigationViewPresenter(view: navigationView,
-                                                    delegate: presenter.navigationViewDelegate)
+                                                    delegate: delegate)
         navigationView.presenter = presenter
         return presenter
     }
@@ -89,6 +104,13 @@ extension HomeViewController: HomeViewInterface {
         mapView = MapView()
         let presenter = MapViewPresenter(view: mapView)
         mapView.presenter = presenter
+        return presenter
+    }
+    
+    func prepareHistoryView(delegate: HomeHistoryPresenterDelegate) -> HomeHistoryPresenterInterface {
+        historyView = HomeHistoryView()
+        let presenter = HomeHistoryPresenter(view: historyView, delegate: delegate)
+        historyView.presenter = presenter
         return presenter
     }
     
@@ -102,6 +124,20 @@ extension HomeViewController: HomeViewInterface {
     
     func fitMapAnnotations() {
         mapView.fitAnnotations()
+    }
+    
+    func showHistoryView() {
+        historyView.get(.height).first?.constant = historyView.viewHeight
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
+    }
+    
+    func hideHistoryView() {
+        historyView.get(.height).first?.constant = 0
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
     }
     
     func hideKeyboard() {
