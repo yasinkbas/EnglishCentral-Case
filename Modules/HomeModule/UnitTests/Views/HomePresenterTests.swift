@@ -12,7 +12,11 @@ import CommonKit
 import PersistentManagerKit
 import CoreData
 
-enum DummyError: Error { case failed }
+enum DummyError: LocalizedError {
+    case failed
+    
+    var errorDescription: String? { "Dummy error description" }
+}
 
 @MainActor
 final class HomePresenterTests: XCTestCase {
@@ -193,7 +197,7 @@ final class HomePresenterTests: XCTestCase {
         XCTAssertFalse(historyModule!.invokedSetHistory)
         XCTAssertFalse(view.invokedShowHistoryView)
         XCTAssertTrue(view.invokedShowAlert)
-        XCTAssertEqual(view.invokedShowAlertParameters?.message, "İşlem tamamlanamadı. (HomeModuleTests.DummyError hatası 0.)")
+        XCTAssertEqual(view.invokedShowAlertParameters?.message, "Dummy error description")
     }
     
     func test_viewDidLoad_InvokesRelatedMethods() {
