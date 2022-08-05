@@ -1,9 +1,9 @@
 //
 //  AppRouter.swift
-//  EnglishCentral-Case
+//  TuistDemoApp
 //
 //  Created by Yasin Akbas on 10.07.2022.
-//  Copyright © 2022 com.yasinkbas.EnglishCentral-Case. All rights reserved.
+//  Copyright © 2022 com.yasinkbas.TuistDemoApp. All rights reserved.
 //
 
 import UIKit

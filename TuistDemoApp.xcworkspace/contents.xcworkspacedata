@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:EnglishCentral-Case.xcodeproj">
+      location = "group:TuistDemoApp.xcodeproj">
    </FileRef>
    <Group
       location = "group:Kits"
