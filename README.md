@@ -1,4 +1,4 @@
-# TuistExampleCase
+# TuistDemoApp
 
 ### Important Note
 
@@ -23,7 +23,6 @@ The project uses [Places API](https://places.demo.api.here.com/places/). To run 
 
 ### Dependency Graph
 ![graph](assets/graph.png)
-
 
 
 

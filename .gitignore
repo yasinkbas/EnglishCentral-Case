@@ -1,13 +1,13 @@
 ### Xcode ###
 Derived**/
-# xcuserdata
-# *.xccheckout
-# *.moved-aside
-# DerivedData
-# *.xcuserstate
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.xcuserstate
 .DS_Store
-# *.pyc
-# *.pbxproj
-# *.xcodeproj/
-# *.xcworkspace/
-# *.xcscheme
+*.pyc
+*.pbxproj
+*.xcodeproj/
+*.xcworkspace/
+*.xcscheme
