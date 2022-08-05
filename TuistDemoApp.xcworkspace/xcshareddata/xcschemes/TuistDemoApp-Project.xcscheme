@@ -56,20 +56,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3803BC2579EB788218F63BBE"
-               BuildableName = "EnglishCentral_Case.app"
-               BlueprintName = "EnglishCentral-Case"
-               ReferencedContainer = "container:EnglishCentral-Case.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "1B6EC0DE2402FD2233BD2360"
                BuildableName = "HomeModule.framework"
                BlueprintName = "HomeModule"
@@ -144,6 +130,20 @@
                BuildableName = "PersistentManagerKit.framework"
                BlueprintName = "PersistentManagerKit"
                ReferencedContainer = "container:Kits/PersistentManagerKit/PersistentManagerKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E193DB1A068ACF95716D2583"
+               BuildableName = "TuistDemoApp.app"
+               BlueprintName = "TuistDemoApp"
+               ReferencedContainer = "container:TuistDemoApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

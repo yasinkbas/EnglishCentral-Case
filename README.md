@@ -6,8 +6,8 @@ The project uses [Places API](https://places.demo.api.here.com/places/). To run 
 
 ## Tech Stack
 
-- Xcode Version: 14 beta (unfortunately, macOS Ventura does not support Xcode 13.**)
-- Minimum iOS Version: iOS 16
+- Xcode Version: 14 beta
+- iOS Version: iOS 16
 - Third-party Dependencies: UILab, NLab
 - [Tuist](https://tuist.io) Version: 1.52.0
 - Modular Architecture
@@ -23,7 +23,6 @@ The project uses [Places API](https://places.demo.api.here.com/places/). To run 
 
 ### Dependency Graph
 ![graph](assets/graph.png)
-
 
 
 

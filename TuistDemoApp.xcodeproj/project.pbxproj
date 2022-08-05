@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E80E83C87B7FDC6EAA1B282 /* UILab in Frameworks */ = {isa = PBXBuildFile; productRef = 83C8B14CE94EE4CCE3952B5F /* UILab */; };
+		1A529FCA7E7B054DD81BD0FC /* NLab in Frameworks */ = {isa = PBXBuildFile; productRef = E2B7D1D2983DE4FDE1ACA320 /* NLab */; };
+		1E0E59D0C83D95829AD405B1 /* Plists+TuistDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFB75383F6E22454BD2449 /* Plists+TuistDemoApp.swift */; };
+		231F1121952D1D8B6CEEAE6F /* MapViewKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAD74AB3EDBAEDF2E67433C3 /* MapViewKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36DB27D979FEDF2821D2A72D /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C46AA8C993449F0BE6CDCE6 /* NetworkKit.framework */; platformFilter = ios; };
+		428458C6454B629FC5AC722F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE764E71825E89AE9103B3E /* AppDelegate.swift */; };
+		440218BFA63C9715EB5AB519 /* DependencyManagerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F7C665335E200BAE41B460 /* DependencyManagerKit.framework */; platformFilter = ios; };
+		542625800471E44C586C292F /* Assets+TuistDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C8774E582323C7F0111D8 /* Assets+TuistDemoApp.swift */; };
+		66F35660D517BE4F8467E7F4 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FFCD4193EBDB8B68744551 /* AppRouter.swift */; };
+		7A872E161F3993157459396D /* CoreViewKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C010BFBB1EAC969901A4A4E2 /* CoreViewKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7C20F2AD13444AD4850F78AC /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C46AA8C993449F0BE6CDCE6 /* NetworkKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CA6689354B6A86DF043EB4B /* Bundle+TuistDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747238F871113D0406DBBB8D /* Bundle+TuistDemoApp.swift */; };
+		8FBFA4B19459668C3B7C3FDB /* CommonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3505B5DB5221D17821B140 /* CommonKit.framework */; platformFilter = ios; };
+		B0DC1E405F9D77B1CC21C3CF /* HomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C063B6091EE4A432114D4AE1 /* HomeModule.framework */; platformFilter = ios; };
+		B4B478DC99CE698B9C13551D /* MapViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD74AB3EDBAEDF2E67433C3 /* MapViewKit.framework */; platformFilter = ios; };
+		BA43179EF14DC065A0550280 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 671A3C5E3FD08DC8BAA10FE0 /* APIKeys.plist */; };
+		C0A7BF1EEAAFA652C9D56238 /* DependencyManagerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 97F7C665335E200BAE41B460 /* DependencyManagerKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7E54546E277B8A6DA0269E6 /* HomeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C063B6091EE4A432114D4AE1 /* HomeModule.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF80D59E3728E88DF0BD5723 /* PersistentManagerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7231DCEEE2348DBD790789C1 /* PersistentManagerKit.framework */; platformFilter = ios; };
+		D813D30EE12BD42A89C0AB53 /* PersistentManagerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7231DCEEE2348DBD790789C1 /* PersistentManagerKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DD7D34A4F5BE92BDECA6D048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC7EEA05B75C70B4F90A76C /* Assets.xcassets */; };
+		DF3179BC9DE1AFBE87BD733F /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A9336837195634E490243B /* AppContainer.swift */; };
+		ED81EE78BF0676CDB6B5A23F /* DependencyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A15245659EBB7845CF1D1 /* DependencyHandler.swift */; };
+		EEA9950905340C9591097C7E /* CoreViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C010BFBB1EAC969901A4A4E2 /* CoreViewKit.framework */; platformFilter = ios; };
+		F3CF7395657F01097A3F4C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C693439FEE7B7BE234D6B208 /* LaunchScreen.storyboard */; };
+		F7B456C0EDBFC8C14F2EA1E6 /* CommonKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3505B5DB5221D17821B140 /* CommonKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EB5815DDA32F109E73BCAE4F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7B456C0EDBFC8C14F2EA1E6 /* CommonKit.framework in Embed Frameworks */,
+				7A872E161F3993157459396D /* CoreViewKit.framework in Embed Frameworks */,
+				C0A7BF1EEAAFA652C9D56238 /* DependencyManagerKit.framework in Embed Frameworks */,
+				C7E54546E277B8A6DA0269E6 /* HomeModule.framework in Embed Frameworks */,
+				231F1121952D1D8B6CEEAE6F /* MapViewKit.framework in Embed Frameworks */,
+				7C20F2AD13444AD4850F78AC /* NetworkKit.framework in Embed Frameworks */,
+				D813D30EE12BD42A89C0AB53 /* PersistentManagerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		17DFB75383F6E22454BD2449 /* Plists+TuistDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plists+TuistDemoApp.swift"; sourceTree = "<group>"; };
+		1C46AA8C993449F0BE6CDCE6 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3505B5DB5221D17821B140 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A9336837195634E490243B /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		3B5A15245659EBB7845CF1D1 /* DependencyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyHandler.swift; sourceTree = "<group>"; };
+		42B8A436E4A19FD85D6D5E98 /* TuistDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuistDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FE764E71825E89AE9103B3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		671A3C5E3FD08DC8BAA10FE0 /* APIKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = APIKeys.plist; sourceTree = "<group>"; };
+		7231DCEEE2348DBD790789C1 /* PersistentManagerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PersistentManagerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7408331BB58BE36D0EF8818F /* TuistDemoApp.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = TuistDemoApp.plist; sourceTree = "<group>"; };
+		747238F871113D0406DBBB8D /* Bundle+TuistDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TuistDemoApp.swift"; sourceTree = "<group>"; };
+		97F7C665335E200BAE41B460 /* DependencyManagerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyManagerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C010BFBB1EAC969901A4A4E2 /* CoreViewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreViewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C063B6091EE4A432114D4AE1 /* HomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C693439FEE7B7BE234D6B208 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D47C8774E582323C7F0111D8 /* Assets+TuistDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+TuistDemoApp.swift"; sourceTree = "<group>"; };
+		DAD74AB3EDBAEDF2E67433C3 /* MapViewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapViewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC7EEA05B75C70B4F90A76C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2FFCD4193EBDB8B68744551 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84DB35540128EA0F710DFA4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FBFA4B19459668C3B7C3FDB /* CommonKit.framework in Frameworks */,
+				EEA9950905340C9591097C7E /* CoreViewKit.framework in Frameworks */,
+				440218BFA63C9715EB5AB519 /* DependencyManagerKit.framework in Frameworks */,
+				B0DC1E405F9D77B1CC21C3CF /* HomeModule.framework in Frameworks */,
+				B4B478DC99CE698B9C13551D /* MapViewKit.framework in Frameworks */,
+				36DB27D979FEDF2821D2A72D /* NetworkKit.framework in Frameworks */,
+				CF80D59E3728E88DF0BD5723 /* PersistentManagerKit.framework in Frameworks */,
+				1A529FCA7E7B054DD81BD0FC /* NLab in Frameworks */,
+				0E80E83C87B7FDC6EAA1B282 /* UILab in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		140B28C7DC6465DD69462940 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				6D8064D7ED7C679242C65093 /* InfoPlists */,
+				4943E3424A38926E270F8041 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		18A9D5174391211F580371A5 /* TuistDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				AB94FBE6AEF3B5FA822D2A2B /* App */,
+				9E2B1D5A836503EC41AF54A9 /* Resources */,
+			);
+			path = TuistDemoApp;
+			sourceTree = "<group>";
+		};
+		1DBFE9FF8635605822108823 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				140B28C7DC6465DD69462940 /* Derived */,
+				18A9D5174391211F580371A5 /* TuistDemoApp */,
+				671A3C5E3FD08DC8BAA10FE0 /* APIKeys.plist */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		3F56D10C1B7323B0EF48FD31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4943E3424A38926E270F8041 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D47C8774E582323C7F0111D8 /* Assets+TuistDemoApp.swift */,
+				747238F871113D0406DBBB8D /* Bundle+TuistDemoApp.swift */,
+				17DFB75383F6E22454BD2449 /* Plists+TuistDemoApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		6D8064D7ED7C679242C65093 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				7408331BB58BE36D0EF8818F /* TuistDemoApp.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		8103619456FDC2C2690BA183 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B3505B5DB5221D17821B140 /* CommonKit.framework */,
+				C010BFBB1EAC969901A4A4E2 /* CoreViewKit.framework */,
+				97F7C665335E200BAE41B460 /* DependencyManagerKit.framework */,
+				C063B6091EE4A432114D4AE1 /* HomeModule.framework */,
+				DAD74AB3EDBAEDF2E67433C3 /* MapViewKit.framework */,
+				1C46AA8C993449F0BE6CDCE6 /* NetworkKit.framework */,
+				7231DCEEE2348DBD790789C1 /* PersistentManagerKit.framework */,
+				42B8A436E4A19FD85D6D5E98 /* TuistDemoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E2B1D5A836503EC41AF54A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFC7EEA05B75C70B4F90A76C /* Assets.xcassets */,
+				C693439FEE7B7BE234D6B208 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB94FBE6AEF3B5FA822D2A2B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				33A9336837195634E490243B /* AppContainer.swift */,
+				4FE764E71825E89AE9103B3E /* AppDelegate.swift */,
+				F2FFCD4193EBDB8B68744551 /* AppRouter.swift */,
+				3B5A15245659EBB7845CF1D1 /* DependencyHandler.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C01D6CDBE3431FE9B7E84257 = {
+			isa = PBXGroup;
+			children = (
+				1DBFE9FF8635605822108823 /* Project */,
+				3F56D10C1B7323B0EF48FD31 /* Frameworks */,
+				8103619456FDC2C2690BA183 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E193DB1A068ACF95716D2583 /* TuistDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A40DC388E5C900DECC190C /* Build configuration list for PBXNativeTarget "TuistDemoApp" */;
+			buildPhases = (
+				E2225F7DA442940FD990F4C5 /* Sources */,
+				B2EA268153B74B4E7466CFBE /* Resources */,
+				6CA2D39C652766A3947BE7BB /* Embed Precompiled Frameworks */,
+				EB5815DDA32F109E73BCAE4F /* Embed Frameworks */,
+				84DB35540128EA0F710DFA4B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TuistDemoApp;
+			packageProductDependencies = (
+				E2B7D1D2983DE4FDE1ACA320 /* NLab */,
+				83C8B14CE94EE4CCE3952B5F /* UILab */,
+			);
+			productName = TuistDemoApp;
+			productReference = 42B8A436E4A19FD85D6D5E98 /* TuistDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3D89D0FE9E7E25A9AA2C618 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = com.yasinkbas.TuistDemoApp;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = D44A59A60CB34FA12E400BBB /* Build configuration list for PBXProject "TuistDemoApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = C01D6CDBE3431FE9B7E84257;
+			packageReferences = (
+				BC731677433CD944BE4F2375 /* XCRemoteSwiftPackageReference "NLab" */,
+				32D93448BEBFBF664EC02EC7 /* XCRemoteSwiftPackageReference "UILab" */,
+			);
+			productRefGroup = 8103619456FDC2C2690BA183 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E193DB1A068ACF95716D2583 /* TuistDemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2EA268153B74B4E7466CFBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43179EF14DC065A0550280 /* APIKeys.plist in Resources */,
+				DD7D34A4F5BE92BDECA6D048 /* Assets.xcassets in Resources */,
+				F3CF7395657F01097A3F4C58 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CA2D39C652766A3947BE7BB /* Embed Precompiled Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Precompiled Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Skipping, nothing to be embedded.\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2225F7DA442940FD990F4C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542625800471E44C586C292F /* Assets+TuistDemoApp.swift in Sources */,
+				8CA6689354B6A86DF043EB4B /* Bundle+TuistDemoApp.swift in Sources */,
+				1E0E59D0C83D95829AD405B1 /* Plists+TuistDemoApp.swift in Sources */,
+				DF3179BC9DE1AFBE87BD733F /* AppContainer.swift in Sources */,
+				428458C6454B629FC5AC722F /* AppDelegate.swift in Sources */,
+				66F35660D517BE4F8467E7F4 /* AppRouter.swift in Sources */,
+				ED81EE78BF0676CDB6B5A23F /* DependencyHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		168C18DE38C4CF24C614601E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Derived/InfoPlists/TuistDemoApp.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yasinkbas.TuistDemoApp;
+				PRODUCT_NAME = TuistDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.7;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		729A882893DAB65492689A1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF0719467F033AA113C3F0DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Derived/InfoPlists/TuistDemoApp.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yasinkbas.TuistDemoApp;
+				PRODUCT_NAME = TuistDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.7;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F09A30749FD8870030EBF5AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96A40DC388E5C900DECC190C /* Build configuration list for PBXNativeTarget "TuistDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				168C18DE38C4CF24C614601E /* Debug */,
+				BF0719467F033AA113C3F0DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D44A59A60CB34FA12E400BBB /* Build configuration list for PBXProject "TuistDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				729A882893DAB65492689A1F /* Debug */,
+				F09A30749FD8870030EBF5AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32D93448BEBFBF664EC02EC7 /* XCRemoteSwiftPackageReference "UILab" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yasinkbas/UILab.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.3;
+			};
+		};
+		BC731677433CD944BE4F2375 /* XCRemoteSwiftPackageReference "NLab" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yasinkbas/NLab.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83C8B14CE94EE4CCE3952B5F /* UILab */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UILab;
+		};
+		E2B7D1D2983DE4FDE1ACA320 /* NLab */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NLab;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B3D89D0FE9E7E25A9AA2C618 /* Project object */;
+}

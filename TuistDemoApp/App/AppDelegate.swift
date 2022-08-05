@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  EnglishCentral-Case
+//  TuistDemoApp
 //
 //  Created by Yasin Akbas on 8.07.2022.
 //

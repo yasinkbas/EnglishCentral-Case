@@ -1,5 +1,8 @@
 import ProjectDescription
 
+let projectName = "TuistDemoApp"
+let bundleId = "com.yasinkbas.\(projectName)"
+
 let packages: [Package] = [
     Package.remote(url: "https://github.com/yasinkbas/NLab.git", requirement: .upToNextMajor(from: "1.1.1")),
     Package.remote(url: "https://github.com/yasinkbas/UILab.git", requirement: .upToNextMajor(from: "0.3.3"))
@@ -32,31 +35,31 @@ let dependencies: [TargetDependency] = {
 }()
 
 let appTarget = Target(
-    name: "EnglishCentral-Case",
+    name: projectName,
     platform: .iOS,
     product: .app,
-    bundleId: "com.yasinkbas.EnglishCentral-Case",
+    bundleId: bundleId,
     deploymentTarget: .iOS(targetVersion: "16.0", devices: [.iphone]),
     infoPlist: .extendingDefault(with: [
         "UILaunchScreen": [:],
         "NSLocationWhenInUseUsageDescription" : "Needs your location to show you near places"
     ]),
     sources: [
-        "EnglishCentral-Case/**/*.swift",
-        "EnglishCentral-Case/**/*.m"
+        "\(projectName)/**/*.swift",
+        "\(projectName)/**/*.m"
     ],
     resources: [
         "APIKeys.plist",
-        "EnglishCentral-Case/Resources/**",
-        "EnglishCentral-Case/**/*.storyboard", // launch storyboard
-        "EnglishCentral-Case/**/*.xcassets",
+        "\(projectName)/Resources/**",
+        "\(projectName)/**/*.storyboard", // launch storyboard
+        "\(projectName)/**/*.xcassets",
     ],
     dependencies: dependencies
 )
 
 let project = Project(
-    name: "EnglishCentral-Case",
-    organizationName: "com.yasinkbas.EnglishCentral-Case",
+    name: projectName,
+    organizationName: bundleId,
     packages: packages,
     targets: [
         appTarget
