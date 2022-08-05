@@ -1,4 +1,4 @@
-# EnglishCentral Case
+# TuistExampleCase
 
 ### Important Note
 
